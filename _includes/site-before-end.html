@@ -1,0 +1,12 @@
+<script>
+    // needed for vextab
+    function resize(){
+        $(".vex-canvas").width($("article").width());
+    }
+    $(document).ready(function(){
+        resize();
+        $(window).on("resize", function(){
+            resize();
+        });
+    });
+</script>

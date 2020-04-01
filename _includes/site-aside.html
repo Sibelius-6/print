@@ -1,0 +1,15 @@
+<aside class="aside typeset">
+    {% unless paginator.posts or page.collection == "tag" %}
+        {% if page.collection == "posts"%}
+            <h4>Related Courses</h4>
+            {% assign related_posts = site.posts | where: "subject", page.subject | where_exp: "item", "item != page" | slice: 0, 3 %}
+            {% include post-related.html %}
+        {% else %}
+            {% include post-list.html %}
+        {% endif %}
+    {% endunless%}
+
+
+
+    
+</aside>

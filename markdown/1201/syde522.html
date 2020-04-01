@@ -1,0 +1,97 @@
+---
+title: SYDE 522 - Machine Intelligence
+layout: markdown
+---
+
+<div class="content">
+
+<h1>SYDE 522 - Machine Intelligence</h1>
+
+<div class="md-toc content">
+    <p class="md-toc-content">
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#lec-2">Lec 2</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#turing-test">Turing Test</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#&quot;john-searle&quot;">&quot;John Searle&quot;</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#tic-tac-toe">Tic-Tac-Toe</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#problems">Problems</a>
+    </span>
+    </p>
+</div>
+
+
+<!--start--><p>Taught by <a href="https://uwaterloo.ca/systems-design-engineering/profile/tizhoosh">Hamid R. Tizhoosh</a>.</p>
+<h1 id="lec-2"><a class="header-link" href="#lec-2"></a>Lec 2</h1>
+<p><em>What is intelligence?</em></p>
+<p>Dictionary =&gt; &quot;the act or state of knowing&quot; -&gt; intelligence = knowledge.</p>
+<p><em>Is that so?</em></p>
+<p>&quot;the excercise of understanding&quot; -&gt; intelligence = understanding</p>
+<p><em>Understanding what? How does understanding happen? Where does understanding happen?</em></p>
+<p>-&gt; intelligence = learning &ne; knowledge acquisition</p>
+<p>Knowledge is stored in &quot;memory&quot;. [Static]</p>
+<p>Learning is happen<b>ing</b> in the brain. [dynamic]</p>
+<ul class="list">
+<li>intelligence is permanent adjustment of knowledge?</li>
+<li>Brain has different functionalities<ul class="list">
+<li>-&gt; memory</li>
+<li>-&gt; learning</li>
+</ul>
+</li>
+</ul>
+<pre class="hljs"><code>             Humans  <span class="hljs-variable">&lt;--|--&gt;</span> Machines
+          __________________________________
+Thoughts  |<span class="hljs-string"> reason     </span>|<span class="hljs-string"> rational decisions </span>|<span class="hljs-string">--&gt; AGI
+--------  </span>|<span class="hljs-string"> --------------------------------</span>|
+Actions   |<span class="hljs-string"> act        </span>|<span class="hljs-string"> rational actions   </span>|<span class="hljs-string">--&gt; AI
+          </span>|<span class="hljs-string">____________</span>|<span class="hljs-string">____________________</span>|</code></pre><h2 id="turing-test"><a class="header-link" href="#turing-test"></a>Turing Test</h2>
+<p>Two rooms A B. A judge can ask questions.</p>
+<p>MIQ ~ t<sub>guess</sub></p>
+<p>where t<sub>guess</sub> = time that judge needs to find out which room is the computer.</p>
+<p><em>Can machines think?</em></p>
+<p><em>Is this the question that the Turing Test tries to answer?</em></p>
+<p>-&gt; His prediction: By 2000, a computer has 30% to fool a human for five minutes?</p>
+<h2 id=""john-searle""><a class="header-link" href="#"john-searle""></a>&quot;John Searle&quot;</h2>
+<p class="img-container"><img src="https://miro.medium.com/max/348/0*zA6_zLOjyt0zDeQG" alt="Chinese Room Argument"></p>
+<p><em>Does this person understand Chinese?</em></p>
+<p><strong><em>Does the room understand Chinese?</em></strong></p>
+<h2 id="tic-tac-toe"><a class="header-link" href="#tic-tac-toe"></a>Tic-Tac-Toe</h2>
+<p>Version 1: Look-Up Table  [Answer for each situation is hard-coded]</p>
+<p>Version 2:</p>
+<ul class="list">
+<li>A: Attempt to place two marks in row</li>
+<li>B: If opponent has two marks in a row, then place a mark in the third position.</li>
+</ul>
+<p>Version 3: Represent the <strong>state</strong>(understanding) of the game</p>
+<ul class="list">
+<li>Current board position?</li>
+<li>next legal moves?</li>
+</ul>
+<p>Use an evaluation funciton.</p>
+<ul class="list">
+<li>Rate the next move! (how likely to win?)</li>
+<li>Look-ahead of possible opponent&#39;s move!</li>
+</ul>
+<pre class="hljs"><code>&lt;<span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">Stupid</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span> <span class="hljs-comment">intelligence</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-literal">-</span>&gt;
+<span class="hljs-comment">Version</span> <span class="hljs-comment">1</span>                   <span class="hljs-comment">2</span>                         <span class="hljs-comment">3</span></code></pre><p>AI = Function Approximation</p>
+<p>We need &quot;data&quot; for any approximation</p>
+<p>Linear Regression.</p>
+<p>AI = Operation ingelligently on data to extract the relationship between in- and outputs.</p>
+<ul class="list">
+<li>-&gt; Training data for learning.</li>
+<li>-&gt; testing data for validation.</li>
+</ul>
+<h2 id="problems"><a class="header-link" href="#problems"></a>Problems</h2>
+<ol class="list">
+<li>Not enough data -&gt; Augmentation</li>
+<li>Too much data -&gt; Dimensionality reduction</li>
+</ol>
+<!--end-->
+</div>

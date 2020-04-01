@@ -1,0 +1,16 @@
+#!/bin/bash
+
+for mdfolder in $( ls -d *md )
+do
+    folder=${mdfolder%??}
+    echo -e "\033[31m--$folder---\033[0m"
+    generate-md --layout ./my-layout --input ./$mdfolder --output ./$folder
+done
+
+echo -e "\033[31m----------------------分割线--------------------\033[0m"
+
+exit 0
+
+git add ..
+git commit -m "${1:-'generate md'}"
+git push

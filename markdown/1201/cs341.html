@@ -1,0 +1,265 @@
+---
+title: CS 341 - Algorithms (scattered notes)
+layout: markdown
+---
+
+<div class="content">
+
+<h1>CS 341 - Algorithms (scattered notes)</h1>
+
+<div class="md-toc content">
+    <p class="md-toc-content">
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#previous-notes">Previous notes</a>
+    </span>
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#lec-4">Lec 4</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#mergesort">Mergesort</a>
+    </span>
+    <span class="md-toc-item md-toc-h3">
+        <a class="md-toc-inner" href="#divide">Divide</a>
+    </span>
+    <span class="md-toc-item md-toc-h3">
+        <a class="md-toc-inner" href="#conquer-and-combine">Conquer and combine</a>
+    </span>
+    <span class="md-toc-item md-toc-h3">
+        <a class="md-toc-inner" href="#merge-steps">Merge Steps</a>
+    </span>
+    <span class="md-toc-item md-toc-h3">
+        <a class="md-toc-inner" href="#pseudocode">Pseudocode</a>
+    </span>
+    <span class="md-toc-item md-toc-h3">
+        <a class="md-toc-inner" href="#analysis">Analysis</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#recurrence-relation">Recurrence relation</a>
+    </span>
+    <span class="md-toc-item md-toc-h3">
+        <a class="md-toc-inner" href="#express-the-complexity-of-mergesort-with-recurrence">Express the complexity of Mergesort with recurrence</a>
+    </span>
+    <span class="md-toc-item md-toc-h3">
+        <a class="md-toc-inner" href="#recursion-tree-method">Recursion tree method</a>
+    </span>
+    <span class="md-toc-item md-toc-h4">
+        <a class="md-toc-inner" href="#recursion-tree-method-formalized">Recursion tree method formalized</a>
+    </span>
+    <span class="md-toc-item md-toc-h3">
+        <a class="md-toc-inner" href="#guess-and-check-method">Guess-and-check method</a>
+    </span>
+    <span class="md-toc-item md-toc-h3">
+        <a class="md-toc-inner" href="#another-approach">Another Approach</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#master-theorem-for-recurrences">Master Theorem for Recurrences</a>
+    </span>
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#lec-5---divide-and-conquer">Lec 5 - divide and conquer</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#problem---non-dominating-points">Problem - Non-dominating points</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#multiprecision-multiplication">Multiprecision Multiplication</a>
+    </span>
+    <span class="md-toc-item md-toc-h3">
+        <a class="md-toc-inner" href="#divide-and-conquer-approach">Divide and Conquer Approach</a>
+    </span>
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#lec-6">Lec 6</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#revisiting-the-recursion-tree-method">Revisiting the recursion tree method</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#fast-matrix-multiplication">Fast Matrix Multiplication</a>
+    </span>
+    <span class="md-toc-item md-toc-h3">
+        <a class="md-toc-inner" href="#attemping-a-better-soln">Attemping a better soln</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#strassen-matrix-multiplication">Strassen Matrix Multiplication</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#the-selection-problem">The selection problem</a>
+    </span>
+    <span class="md-toc-item md-toc-h3">
+        <a class="md-toc-inner" href="#quickselect">QuickSelect</a>
+    </span>
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#lec-7">Lec 7</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#median-of-medians-quickselect">Median-of-medians QuickSelect</a>
+    </span>
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#lec-8">Lec 8</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#greedy-algorithms">Greedy Algorithms</a>
+    </span>
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#lec-9---16">Lec 9 - 16</a>
+    </span>
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#lec-17">Lec 17</a>
+    </span>
+    </p>
+</div>
+
+
+<!--start--><h1 id="previous-notes"><a class="header-link" href="#previous-notes"></a>Previous notes</h1>
+<p><a href="/pdfs/1201/cs341.pdf">notes</a></p>
+<h1 id="lec-4"><a class="header-link" href="#lec-4"></a>Lec 4</h1>
+<h2 id="mergesort"><a class="header-link" href="#mergesort"></a>Mergesort</h2>
+<p>mergesort: n integers, arbitrary order, sorting problem. Three steps: divide conquer and combine.</p>
+<p>Do you have to divide evenly? No, but it will affect the run time.</p>
+<p>If not power of two, need to use floor, ceil. Solve this problem recursively. Assume recursive call works,
+then we can put the subsolution together. Then we have two sorted arrays, how can we combine it somehow to merge?</p>
+<p>Take these two halves, then use <code>merge</code>. It&#39;s like using a zipper. The complexity ends in nlogn.</p>
+<h3 id="divide"><a class="header-link" href="#divide"></a>Divide</h3>
+<p>call mergesort recursively on left and right. Then we have recursion tree.</p>
+<h3 id="conquer-and-combine"><a class="header-link" href="#conquer-and-combine"></a>Conquer and combine</h3>
+<p>From the bottom, we just combine two single elements together, which is easy. As we keep going up, we need to merge these things.
+Apply merge steps as we go up.</p>
+<h3 id="merge-steps"><a class="header-link" href="#merge-steps"></a>Merge Steps</h3>
+<p>Maintain two indices of left index and right index. We compare two values in two indices.
+The first element should be the smallest element, which is smaller of two smallest elements. Then increase the index of the left/right array.</p>
+<h3 id="pseudocode"><a class="header-link" href="#pseudocode"></a>Pseudocode</h3>
+<p>See slides. The base case is if the array size is 1, then no need to sort. Divide the array by figuring out how many elements
+should be in the left/right array. Make recursive call.</p>
+<p>Merge code is a bit messy. Take two arrays, create a big array to hold all these elements. Three cases. Fairly straight forward code...</p>
+<h3 id="analysis"><a class="header-link" href="#analysis"></a>Analysis</h3>
+<p>Now it&#39;s like loop analysis. Two steps for this: base case constant time. Here we need to copy elements, which is linear time.
+Practically, we can just pass the indices without copying elements. Merge in the end takes linear time too. Not too hard to see why.
+In <code>merge</code>, you can run nL + nR iterations before terminate. Certainly it&#39;s linear. But, we need to worry about recursive calls, deeper level
+of recursion.</p>
+<p>How do we analyze recursive structures?</p>
+<p>We use recurrence relations. Represent complexity of problem by complexity of subproblems.</p>
+<h2 id="recurrence-relation"><a class="header-link" href="#recurrence-relation"></a>Recurrence relation</h2>
+<p>infinite sequence of real numbers. You sometimes need initial values.</p>
+<h3 id="express-the-complexity-of-mergesort-with-recurrence"><a class="header-link" href="#express-the-complexity-of-mergesort-with-recurrence"></a>Express the complexity of Mergesort with recurrence</h3>
+<p>divide takes linear time. Conquering takes T(ceil n/2) + T(floor n/2). combine linear.</p>
+<p>When n=1, then it&#39;s easy. When n&gt;1, then we use the expression in slide (just add expressions above together).</p>
+<p>T(n) is a function, which is a recurrence relation. How can we solve for T(n)?</p>
+<p>To make it easier, let \(n=2^k\).</p>
+<p>It&#39;s not so useful if we have T(n), T(n-1), ...</p>
+<h3 id="recursion-tree-method"><a class="header-link" href="#recursion-tree-method"></a>Recursion tree method</h3>
+<p>top call does \(cn\). Second level: Each mergesort call does \(2(cn/2)=cn\). The bottom level does \(n(c)=cn\).
+Now the question is how much in total? If we sum up them all, we have \(\log n\) levels. Thus total is \(cn\log n\), which is
+\(O(n\log n)\).</p>
+<p>Or you could do this with table, more analytically. Fill it in and sum them up in total runtime column.</p>
+<h4 id="recursion-tree-method-formalized"><a class="header-link" href="#recursion-tree-method-formalized"></a>Recursion tree method formalized</h4>
+<p>When n is power of 2, we can solve the problem easily.</p>
+<ul class="list">
+<li>Start with one node tree.</li>
+<li>Grow two children.</li>
+<li>Repeat this process recursively, until you hit the base case.</li>
+<li>Sum up the costs over all nodes.</li>
+</ul>
+<h3 id="guess-and-check-method"><a class="header-link" href="#guess-and-check-method"></a>Guess-and-check method</h3>
+<p>First substitute T(n-1) with T(n-2)+... (by defn). We unroll this recurrence by one level.
+Simplify it a little bit. We preserve the patterns when simplifying. If haven&#39;t see the pattern yet,
+unroll by one further level.</p>
+<p>Identify the patern and guess what happens in the limit. Then we get</p>
+<p>\[T(n)=\ldots=guess(n)\]</p>
+<p>Plug the initial value then get a closed form.</p>
+<p>This is an <strong>educated guess</strong>. Here is enough for this course. To prove it, prove by induction (base case and induction step).</p>
+<h3 id="another-approach"><a class="header-link" href="#another-approach"></a>Another Approach</h3>
+<p>with some experience, you might guess it&#39;s quadratic. You should have the form \(an^2+bn+c\) for some unknown constants a,b,c.
+So just carry the unknown constants into the proof!</p>
+<p>We set T(n+1) = guess(n+1), equalize the coefficients.</p>
+<p><em>Time Permitting</em> might not get here...</p>
+<h2 id="master-theorem-for-recurrences"><a class="header-link" href="#master-theorem-for-recurrences"></a>Master Theorem for Recurrences</h2>
+<p>We start with a simplified version. \(a\ge 1, b&gt; 1\). Consider the recurrence
+\[T(n)=aT\left({n\over b}\right) + \Theta(n^y)\]
+where n is a power of b.</p>
+<p>Denote \(x=\log_b a\). Then
+\[
+T(n)\in
+\begin{cases}
+\Theta(n^x) &amp; \text{if}~y&lt;x \\
+\Theta(n^x\log n) &amp; \text{if} ~y=x \\
+\Theta(n^y) &amp; \text{if}~y&gt;x.
+\end{cases}
+\]</p>
+<p>You can prove it by kinda recursion tree methods.</p>
+<h1 id="lec-5---divide-and-conquer"><a class="header-link" href="#lec-5---divide-and-conquer"></a>Lec 5 - divide and conquer</h1>
+<h2 id="problem---non-dominating-points"><a class="header-link" href="#problem---non-dominating-points"></a>Problem - Non-dominating points</h2>
+<p><strong>Donimate</strong>: \(x_1&gt;x_2 \text{ and } y_1&gt;y_2\).</p>
+<h2 id="multiprecision-multiplication"><a class="header-link" href="#multiprecision-multiplication"></a>Multiprecision Multiplication</h2>
+<p>Grade School Multiplication - \(O(k^2)\)</p>
+<h3 id="divide-and-conquer-approach"><a class="header-link" href="#divide-and-conquer-approach"></a>Divide and Conquer Approach</h3>
+<p>Assume \(k\) is even to make it easy. Half high order bits, half low order bits.
+Then you can write
+\[
+X=2^{2/k}X_L + X_R \text{ and } Y=2^{k/2}Y_L + Y_R
+\]
+Reorder the bits and then we get the multiplication of the form</p>
+<p>\[
+X Y=2^{k} X_{L} Y_{L}+2^{k / 2}\left(X_{L} Y_{R}+X_{R} Y_{L}\right)+X_{R} Y_{R}
+\]</p>
+<p>However, four recursive calls make the complexity \(O(k^2)\).</p>
+<p><em>Karastuba&#39;s algorithm</em> reduces the number of subproblems from 4 to 3.</p>
+<p>Then we have 3 recursive calls. So by Master Theorem, then complexity is \(\Theta(k^{1.59})\).</p>
+<p>There are several further improvements known.</p>
+<h1 id="lec-6"><a class="header-link" href="#lec-6"></a>Lec 6</h1>
+<h2 id="revisiting-the-recursion-tree-method"><a class="header-link" href="#revisiting-the-recursion-tree-method"></a>Revisiting the recursion tree method</h2>
+<p>certainly on assigments... probably on tests.</p>
+<h2 id="fast-matrix-multiplication"><a class="header-link" href="#fast-matrix-multiplication"></a>Fast Matrix Multiplication</h2>
+<p>\[
+C_{ij} = DotProd(row_i(A),col_j(B))=\sum_{i=1}^n A_{ik}B_{kj}
+\]
+Running time: \(O(n^3)\).</p>
+<h3 id="attemping-a-better-soln"><a class="header-link" href="#attemping-a-better-soln"></a>Attemping a better soln</h3>
+<ul class="list">
+<li>partition -&gt; submatrics</li>
+<li>div &amp; conquer</li>
+</ul>
+<p>Deriving a recurrence: \(T(n)= 8 T(n/2)+\Theta(n^2)\)</p>
+<h2 id="strassen-matrix-multiplication"><a class="header-link" href="#strassen-matrix-multiplication"></a>Strassen Matrix Multiplication</h2>
+<p>7 multiplications of n/2 by n/2 matrices.</p>
+<p>\[
+T(k)\in\Theta(k^{\log_2 7}) = \Theta(n^{2.81})
+\]</p>
+<h2 id="the-selection-problem"><a class="header-link" href="#the-selection-problem"></a>The selection problem</h2>
+<ul class="list">
+<li>A: n distinct integer values. k between 1 and n.</li>
+<li>k smallest integer in A</li>
+</ul>
+<h3 id="quickselect"><a class="header-link" href="#quickselect"></a>QuickSelect</h3>
+<p>Recursion.</p>
+<p><code>QuickSelect</code> and <code>Restructure</code>.</p>
+<p>Good pivot, reducing fraction of n. Prob of pivot being good is 1/2.</p>
+<h1 id="lec-7"><a class="header-link" href="#lec-7"></a>Lec 7</h1>
+<h2 id="median-of-medians-quickselect"><a class="header-link" href="#median-of-medians-quickselect"></a>Median-of-medians QuickSelect</h2>
+<p>Always picking a good pivot</p>
+<p>Take a look at example: example input A[1...50]</p>
+<ul class="list">
+<li>group into rows of 5</li>
+<li>find median of each row</li>
+<li>build array of medians</li>
+<li>recursively find median of this smaller array</li>
+</ul>
+<p>How good is that?</p>
+<ul class="list">
+<li>at least 3/10 is bigger/smaller
+\[T(n)
+\begin{cases}
+\le O(n)+T(n/5)+T(7n/10) &amp; \text{if }n\ge 15\\
+=O(1) &amp; \text{if }n\le 15
+\end{cases}
+\]</li>
+</ul>
+<p>so the complexity is less than \(\Theta(n)\).</p>
+<h1 id="lec-8"><a class="header-link" href="#lec-8"></a>Lec 8</h1>
+<h2 id="greedy-algorithms"><a class="header-link" href="#greedy-algorithms"></a>Greedy Algorithms</h2>
+<p>solving optimization problems.</p>
+<h1 id="lec-9---16"><a class="header-link" href="#lec-9---16"></a>Lec 9 - 16</h1>
+<p>Missed two weeks of lectures: Continuing on greedy + DP.</p>
+<h1 id="lec-17"><a class="header-link" href="#lec-17"></a>Lec 17</h1>
+<p>minimum spanning trees, single-source shortest paths</p>
+<p>Weighted Undirected Graph</p>
+<!--end-->
+</div>

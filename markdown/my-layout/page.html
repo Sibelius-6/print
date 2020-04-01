@@ -1,0 +1,24 @@
+---
+title: {{ title }}
+layout: markdown
+---
+
+<div class="content">
+
+<h1>{{ title }}</h1>
+
+<div class="md-toc content">
+    <p class="md-toc-content">
+    {{#each headings}}
+    <span class="md-toc-item md-toc-h{{depth}}">
+        <a class="md-toc-inner" href="#{{id}}">{{text}}</a>
+    </span>
+    {{/each}}
+    </p>
+</div>
+
+
+<!--start-->
+    {{~> content}}
+<!--end-->
+</div>

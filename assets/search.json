@@ -1,0 +1,38 @@
+---
+layout: null
+sitemap: false
+---
+
+{% capture json %}
+[
+  {% assign collections = site.collections | where_exp:'collection','collection.title == "Posts"' %}
+  {% for collection in collections %}
+    {% assign docs = collection.docs | where_exp:'doc','doc.sitemap != false' %}
+    {% for doc in docs %}
+      {
+        "title": {{ doc.title | jsonify }},
+        "excerpt": {{ doc.excerpt | markdownify | strip_html | truncatewords: 50 | jsonify }},
+        "content": {{ doc.content | markdownify | strip_html | jsonify }},
+        "feature_text": {{ doc.feature_text | markdownify | strip_html | jsonify }},
+        "url": {{ site.baseurl | append: doc.url | jsonify }}
+      },
+    {% endfor %}
+  {% endfor %}
+  {% assign old_md = site.html_pages | where_exp:'doc','doc.sitemap != false' | where_exp:'doc','doc.title != null' | where_exp:'doc', "doc.url contains 'markdown'" %}
+  {% assign new_md = site.html_pages | where_exp:'doc','doc.sitemap != false' | where_exp:'doc','doc.title != null' | where_exp:'doc', "doc.url contains 'md'" %}
+  {% assign pages = old_md | concat: new_md %}
+  {% for page in pages %}
+  {
+      {% assign myContent = page.content | split: "<!--start-->" | last %}
+    "title": {{ page.title | jsonify }},
+    "excerpt": {{ myContent | markdownify | strip_html | truncatewords: 50 | jsonify }},
+    "content": {{ myContent | markdownify | strip_html | jsonify }},
+    "feature_text": "",
+    "url": {{ site.baseurl | append: page.url | jsonify }}
+  }
+  {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
+{% endcapture %}
+
+{{ json | lstrip }}

@@ -1,0 +1,23 @@
+---
+title: Subject
+layout: default
+feature_text: <h2>Sort by subjects</h2>
+feature_image: "https://picsum.photos/1300/400?image=989"
+---
+<main class="main container">
+    <div class="content">
+        <!-- my code -->
+        {% assign all_subjects = site.subject | map: "subject" | uniq %}
+        {% assign taken_subjects = site.posts | map: "subject" | uniq | sort %}
+        <ul>
+        {% for item in taken_subjects %}
+            <li>
+                <div class="typeset">
+                    <h4><a href="/subject/{{ item }}" {% unless taken_subjects contains item %}style="opacity: .66;"{% endunless %}>{{ item | upcase }}</a></h4>
+                </div>
+            </li>
+            <br>
+        {% endfor %}
+        </ul>
+    </div>
+</main>

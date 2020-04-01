@@ -1,0 +1,98 @@
+---
+title: Student Mathematical Library
+layout: mdtoc
+---
+
+> The AMS undergraduate series, the Student Mathematical Library, is for books that will spark students' interests in modern mathematics and increase their appreciation for research. Books published in the series emphasize original topics and approaches. The step from mathematical coursework to mathematical research is one of the most important developments in a mathematician's career. To make the transition successfully, the student must be motivated and interested in doing mathematics rather than merely learning it. They are suitable for honors courses, upper-division seminars, reading courses, or self-study.
+
+See [here](https://bookstore.ams.org/stml) for the official information.
+
+- [x] A First Journey through Logic
+- [ ] An Introduction to Symmetric Functions and Their Combinatorics
+- [x] Discrete Morse Theory
+- [ ] Hilbert's Tenth Problem: An Introduction to Logic, Number Theory, and Computability
+- [x] An Introduction to Ramsey Theory: Fast Functions, Infinity, and Metamathematics
+- [x] Extremal Problems for Finite Sets
+- [x] Invitation to Ergodic Theory
+- [x] Volterra Adventures
+- [ ] A Conversational Introduction to Algebraic Number Theory: Arithmetic Beyond Z
+- [x] From Groups to Geometry and Back
+- [x] Modern Cryptography and Elliptic Curves: A Beginner's Guide
+- [x] Problems in Abstract Algebra
+- [x] Game Theory: A Playful Introduction
+- [x] Matrix Groups for Undergraduates: 2nd Edition
+- [x] A User-Friendly Introduction to Lebesgue Measure and Integration
+- [x] Differential Geometry: Curves — Surfaces — Manifolds, 3rd Edition
+- [x] Mathematics++: Selected Topics Beyond the Basic Courses
+- [x] Quandles: An Introduction to the Algebra of Knots
+- [x] Winding Around: The Winding Number in Topology, Geometry, and Analysis
+- [x] A First Course in the Calculus of Variations
+- [x] Asymptopia
+- [x] Classical Mechanics with Calculus of Variations and Optimal Control: An Intuitive Introduction
+- [x] Primality Testing for Beginners
+- [x] Ramsey Theory on the Integers: 2nd Edition
+- [x] Algebraic Geometry: A Problem Solving Approach
+- [x] Difference Sets: Connecting Algebra, Combinatorics, and Geometry
+- [x] The Joy of Factoring
+- [x] Computability Theory
+- [x] Geometries
+- [x] Harmonic Analysis: From Fourier to Wavelets
+- [x] Numbers and Functions: From a classical-experimental mathematician's point of view
+- [x] Elliptic Curves, Modular Forms, and Their L-functions
+- [x] Introduction to Representation Theory
+- [x] Mostly Surfaces
+- [x] Probability Tales
+- [x] The Erdős Distance Problem
+- [x] The Game of Cops and Robbers on Graphs
+- [x] Glimpses of Soliton Theory: The Algebra and Geometry of Nonlinear PDEs
+- [x] Random Walk and the Heat Equation
+- [x] Thirty-three Miniatures: Mathematical and Algorithmic Applications of Linear Algebra
+- [x] A (Terse) Introduction to Lebesgue Integration
+- [x] A Primer on the Calculus of Variations and Optimal Control Theory
+- [x] Differential Equations, Mechanics, and Computation
+- [x] Lectures on Fractal Geometry and Dynamical Systems
+- [x] Lectures on Quantum Mechanics for Mathematics Students
+- [x] Low-Dimensional Geometry: From Euclidean Surfaces to Hyperbolic Knots
+- [x] A (Terse) Introduction to Linear Algebra
+- [x] Elementary Geometry
+- [x] Higher Arithmetic: An Algorithmic Introduction to Number Theory
+- [x] Lectures on Surfaces: (Almost) Everything You Wanted to Know about Them
+- [x] p-adic Analysis Compared with Real
+- [x] A View from the Top: Analysis, Combinatorics and Number Theory
+- [x] Filtering and Prediction: A Primer
+- [x] Finite Fields and Applications
+- [x] Frames for Undergraduates
+- [x] Invariant Theory
+- [x] A First Course in Topology: Continuity and Dimension
+- [x] Enumerative Geometry and String Theory
+- [x] Galois Theory for Beginners: A Historical Perspective
+- [x] Lectures in Geometric Combinatorics
+- [x] Number Theory in the Spirit of Ramanujan
+- [x] Geometry and Billiards
+- [x] Heads or Tails: An Introduction to Limit Theorems in Probability
+- [x] Mathematical Modelling: A case studies approach
+- [x] Matrix Groups for Undergraduates
+- [x] Six Themes on Variation
+- [x] Transformation Groups for Beginners
+- [x] An Introduction to Lie Groups and the Geometry of Homogeneous Spaces
+- [x] Computable Functions
+- [x] Elementary Algebraic Geometry
+- [x] Lectures on Generating Functions
+- [x] Problems in Mathematical Analysis III: Integration
+- [x] Basic Set Theory
+- [x] Cryptography: An Introduction
+- [x] An Introduction to Game-Theoretic Modelling: 2nd Edition
+- [x] Introduction to Topology
+- [x] Plane Algebraic Curves
+- [x] Plateau's Problem: An Invitation to Varifold Geometry, Revised Edition
+- [x] Problems in Mathematical Analysis II: Continuity and Differentiation
+- [x] An Introduction to the Mathematical Theory of Waves
+- [x] Codes and Curves
+- [x] Exploring the Number Jungle: A Journey into Diophantine Analysis
+- [x] Inversion Theory and Conformal Mapping
+- [x] Problems in Mathematical Analysis I: Real Numbers, Sequences and Series
+- [x] The Game's Afoot!  Game Theory in Myth and Paradox
+- [x] The Mathematics of Soap Films: Explorations with Maple®
+- [x] The Prime Numbers and Their Distribution
+- [x] Lectures on Contemporary Probability
+- [x] Miles of Tiles

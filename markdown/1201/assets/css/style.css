@@ -1,0 +1,614 @@
+/*********************************************************************
+This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+For more information, please refer to <http://unlicense.org/>
+*********************************************************************/
+
+/*
+WiTeX
+https://github.com/AndrewBelt/WiTeX
+*/
+
+
+/* Latin Modern (LaTeX default) font */
+
+@font-face {
+	font-family: 'Latin Modern Roman';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/lmroman10-regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Latin Modern Roman';
+	font-weight: bold;
+	font-style: normal;
+	src: url('../fonts/lmroman10-bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Latin Modern Roman';
+	font-weight: normal;
+	font-style: italic;
+	src: url('../fonts/lmroman10-italic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Latin Modern Roman';
+	font-weight: bold;
+	font-style: italic;
+	src: url('../fonts/lmroman10-bolditalic.woff') format('woff');
+}
+
+/* latin */
+@font-face {
+  font-family: 'Indie Flower';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Indie Flower'), local('IndieFlower'), url(https://fonts.gstatic.com/s/indieflower/v11/m8JVjfNVeKWVnh3QMuKkFcZVaUuH99GUDg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Sacramento';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Sacramento'), local('Sacramento-Regular'), url(https://fonts.gstatic.com/s/sacramento/v7/buEzpo6gcdjy0EiZMBUG4CMf_f5Iai0Ycw.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Sacramento';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Sacramento'), local('Sacramento-Regular'), url(https://fonts.gstatic.com/s/sacramento/v7/buEzpo6gcdjy0EiZMBUG4C0f_f5Iai0.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Alegreya Sans SC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Alegreya Sans SC Regular'), local('AlegreyaSansSC-Regular'), url(https://fonts.gstatic.com/s/alegreyasanssc/v9/mtGh4-RGJqfMvt7P8FUr0Q1j-Hf1BkRl9w5DPYpGMg.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Alegreya Sans SC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Alegreya Sans SC Regular'), local('AlegreyaSansSC-Regular'), url(https://fonts.gstatic.com/s/alegreyasanssc/v9/mtGh4-RGJqfMvt7P8FUr0Q1j-Hf1Bk1l9w5DPYpGMg.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Alegreya Sans SC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Alegreya Sans SC Regular'), local('AlegreyaSansSC-Regular'), url(https://fonts.gstatic.com/s/alegreyasanssc/v9/mtGh4-RGJqfMvt7P8FUr0Q1j-Hf1BkVl9w5DPYpGMg.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Alegreya Sans SC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Alegreya Sans SC Regular'), local('AlegreyaSansSC-Regular'), url(https://fonts.gstatic.com/s/alegreyasanssc/v9/mtGh4-RGJqfMvt7P8FUr0Q1j-Hf1Bkpl9w5DPYpGMg.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Alegreya Sans SC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Alegreya Sans SC Regular'), local('AlegreyaSansSC-Regular'), url(https://fonts.gstatic.com/s/alegreyasanssc/v9/mtGh4-RGJqfMvt7P8FUr0Q1j-Hf1BkZl9w5DPYpGMg.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Alegreya Sans SC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Alegreya Sans SC Regular'), local('AlegreyaSansSC-Regular'), url(https://fonts.gstatic.com/s/alegreyasanssc/v9/mtGh4-RGJqfMvt7P8FUr0Q1j-Hf1Bkdl9w5DPYpGMg.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Alegreya Sans SC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Alegreya Sans SC Regular'), local('AlegreyaSansSC-Regular'), url(https://fonts.gstatic.com/s/alegreyasanssc/v9/mtGh4-RGJqfMvt7P8FUr0Q1j-Hf1Bkll9w5DPYo.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Page Layout */
+
+body {
+  background-color: white;
+  font-size: 13pt;
+}
+
+body {
+	font-family: 'Latin Modern Roman', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	border: none;
+	font-weight: bold;
+}
+
+h1:not(:first-child):after
+{
+    content:' ';
+    display:block;
+    border:2px solid black;
+}
+
+a, a:visited {
+	color: #a00;
+}
+
+ul {
+	list-style: disc;
+}
+
+/* Content Box */
+
+.content {
+	/*max-width: 720px;*/
+	margin: 2em auto;
+}
+
+h1:first-child {
+    font-family: "Indie Flower" !important;
+	text-align: center;
+	display: block;
+	font-size: 300%;
+}
+
+/* Article Body */
+
+.content {
+	text-align: justify;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+    /*padding: 0 1em;*/
+	padding: 1em 10%;
+}
+
+dl dd {
+	/* center definitions (most useful for display equations) */
+	text-align: center;
+}
+
+/*@media (min-width: 43.75em) {
+  .content {
+    padding: 0;
+  }
+}*/
+
+/* blockquote style */
+blockquote {
+	background: #f9f9f9;
+	border-left: 10px solid #ccc;
+	margin: 1.5em 10px;
+	padding: 0.5em 10px;
+	quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote p {
+	display: inline;
+}
+
+/* typora toc style */
+
+.md-toc {
+	min-height: 3.58rem;
+	position: relative;
+	font-size: 0.9rem;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.md-toc-content {
+	position: relative;
+	margin-left: 0px;
+}
+
+.md-toc-content::after, .md-toc::after {
+	display: none;
+}
+
+.md-toc-item {
+	display: block;
+	color: rgb(65, 131, 196);
+}
+
+.md-toc-item a {
+	text-decoration: none;
+}
+
+.md-toc-inner:hover {
+	text-decoration: underline;
+}
+
+.md-toc-inner {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.md-toc-h1 .md-toc-inner {
+	margin-left: 0px;
+	font-weight: 700;
+}
+
+.md-toc-h2 .md-toc-inner {
+	margin-left: 2em;
+}
+
+.md-toc-h3 .md-toc-inner {
+	margin-left: 4em;
+}
+
+.md-toc-h4 .md-toc-inner {
+	margin-left: 6em;
+}
+
+.md-toc-h5 .md-toc-inner {
+	margin-left: 8em;
+}
+
+.md-toc-h6 .md-toc-inner {
+	margin-left: 10em;
+}
+
+@media screen and (max-width: 48em) {
+	.md-toc-h3 .md-toc-inner {
+		margin-left: 3.5em;
+	}
+
+	.md-toc-h4 .md-toc-inner {
+		margin-left: 5em;
+	}
+
+	.md-toc-h5 .md-toc-inner {
+		margin-left: 6.5em;
+	}
+
+	.md-toc-h6 .md-toc-inner {
+		margin-left: 8em;
+	}
+}
+
+a.md-toc-inner {
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+}
+
+
+/* below are style from homepage */
+
+
+footer, header { display: block; }
+img {
+	border-style: none
+}
+a img {
+	border: none
+}
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto
+}
+
+.header .nav,
+.footer .nav {
+	text-align: right
+}
+
+.header .logo,
+.footer .logo {
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	-moz-box-flex: 0;
+	-moz-flex: 0 0 auto;
+	-ms-flex: 0 0 auto;
+	flex: 0 0 auto
+}
+
+.header .container,
+.footer .container {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-direction: normal;
+	-webkit-box-orient: horizontal;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	-webkit-justify-content: space-between;
+	-moz-justify-content: space-between;
+	justify-content: space-between;
+	padding: 1rem 0
+}
+
+@media screen and (min-width: 40em) {
+	.header .container,
+	.footer .container {
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		-moz-align-items: center;
+		align-items: center
+	}
+}
+
+.header .nav {
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: flex-end;
+	justify-content: flex-end;
+	overflow: hidden
+}
+
+.feature {
+	padding-bottom: .4rem;
+	margin-bottom: 1.6rem;
+	text-align: center;
+	background: #f9fafa;
+	background-size: cover;
+	background-position: center
+}
+
+.feature .container {
+	min-height: 35vh;
+	max-width: 60%;
+	-webkit-box-direction: normal;
+	-webkit-box-orient: vertical;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	justify-content: center
+}
+
+.logo {
+	display: inline-block;
+	line-height: 0;
+	max-height: 4rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	align-items: center
+}
+
+.logo img {
+	max-height: 5rem
+}
+
+.nav a {
+	padding: .2rem
+}
+
+.nav--social a {
+	display: inline-block;
+	line-height: 1
+}
+
+.small {
+	padding-top: .8rem;
+	color: #a8adac;
+	display: inline-block
+}
+
+.footer {
+	background: #242e2b;
+	color: #a8adac
+}
+
+.footer a {
+	color: #a8adac
+}
+
+.footer a:hover {
+	color: #fff
+}
+
+.footer .container {
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap
+}
+
+.footer .small {
+	padding-top: 0
+}
+
+.header,
+.feature,
+.footer {
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	-moz-box-flex: 0;
+	-moz-flex: 0 0 auto;
+	-ms-flex: 0 0 auto;
+	flex: 0 0 auto
+}
+
+nav .list {
+	list-style: none;
+}
+
+.list--nav {
+	overflow: hidden;
+	margin-bottom: var(--listHeight, 0)
+}
+
+@media screen and (min-width: 40em) {
+	.item--nav {
+		margin-left: .4rem;
+		display: inline-block
+	}
+}
+
+.item--nav:first-of-type {
+	margin-left: 0
+}
+
+.item--current a {
+	color: #a8adac
+}
+
+button, .button {
+	padding: .6rem 1.2rem;
+	margin-bottom: .6rem;
+	transition: color .1s, background-color .1s, border .1s;
+	line-height: inherit;
+	border: none;
+	box-shadow: none;
+	border-radius: 0;
+	-webkit-appearance: none
+}
+
+.button--nav {
+	background: none;
+	color: #a00;
+	margin-bottom: 0;
+	min-height: 4rem;
+	min-width: 4rem
+}
+
+@media screen and (min-width: 40em) {
+	.button--nav {
+		display: none
+	}
+}
+
+.button--nav:hover,
+.button--nav:focus {
+	box-shadow: none;
+	color: #a00;
+}
+
+.nav a {
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: .2rem;
+	margin-right: .2rem
+}
+
+a {
+	text-decoration: none;
+	transition: color .1s, background-color .1s
+}
+
+/* spacing */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: #ddd;}
+
+th {
+  padding-top: 12px;
+  font-family: "Alegreya Sans SC" !important;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #C71585;
+  color: white;
+}
+
+/* for example block */
+.ex {
+ width:100%;
+ /*height:300px;*/
+ background: #f2ebeb;
+ border-radius: 10px 10px 10px 10px;
+ overflow:hidden;
+ margin-bottom: 20px;
+}
+
+.ex-title {
+ background: #C71585;
+ padding:10px;
+ color: white;
+ padding: 12px;
+ font-family: "Alegreya Sans SC" !important;
+}
+
+.ex-content {
+ padding:10px;
+}
+
+/* The alert message box */
+.alert {
+  padding: 20px;
+  background-color: #f44336; /*#f44336;  Red */
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}

@@ -1,0 +1,839 @@
+---
+title: Stat 333 - Applied Probability
+layout: markdown
+---
+
+<div class="content">
+
+<h1>Applied Probability</h1>
+
+<div class="md-toc content">
+    <p class="md-toc-content">
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#lecture-2">Lecture 2</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#introduction">Introduction</a>
+    </span>
+    <span class="md-toc-item md-toc-h3">
+        <a class="md-toc-inner" href="#basic-concepts-of-prob-theory">Basic concepts of prob theory</a>
+    </span>
+    <span class="md-toc-item md-toc-h4">
+        <a class="md-toc-inner" href="#**prob-model**">Prob model</a>
+    </span>
+    <span class="md-toc-item md-toc-h4">
+        <a class="md-toc-inner" href="#**indepdence**">Indepdence</a>
+    </span>
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#lecture-3">Lecture 3</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#conditional-prob">conditional prob</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#bayesian-formula">Bayesian formula</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#random-variables">random variables</a>
+    </span>
+    <span class="md-toc-item md-toc-h3">
+        <a class="md-toc-inner" href="#two-types-of-rvs-in-this-course">two types of rvs in this course</a>
+    </span>
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#lec-4">Lec 4</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#bernulli-trails">Bernulli Trails</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#binomial-rv">Binomial rv</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#geometric-rv">Geometric rv</a>
+    </span>
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#lec-5">Lec 5</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#negtive-binomial">Negtive Binomial</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#possion-rv:-pois-(\(\lambda\))">Possion rv: pois (\(\lambda\))</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#exponential-rv:-\(\exp(\lambda)\)">Exponential rv: \(\exp(\lambda)\)</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#expectation-&amp;-variance">Expectation &amp; Variance</a>
+    </span>
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#lec-6">Lec 6</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#indicator-rvs">indicator rvs</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#chapter-2-waiting-time-rcs">chapter 2 waiting time rcs</a>
+    </span>
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#lec-7">Lec 7</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#chapter-3-conditional-expectation">Chapter 3 Conditional expectation</a>
+    </span>
+    <span class="md-toc-item md-toc-h3">
+        <a class="md-toc-inner" href="#3.1-joint-rvs">3.1 joint rvs</a>
+    </span>
+    <span class="md-toc-item md-toc-h4">
+        <a class="md-toc-inner" href="#joint-discrete:-x-&amp;-y">Joint discrete: X &amp; Y</a>
+    </span>
+    <span class="md-toc-item md-toc-h4">
+        <a class="md-toc-inner" href="#joint-continuous">joint continuous</a>
+    </span>
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#lec-8">Lec 8</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#3.2-conditional-distribution-&amp;-conditional-expectation">3.2 Conditional distribution &amp; Conditional expectation</a>
+    </span>
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#lec-9">Lec 9</a>
+    </span>
+    <span class="md-toc-item md-toc-h3">
+        <a class="md-toc-inner" href="#properties-of-conditional-expectation">properties of conditional expectation</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#3.3-calculating-expectation-by-conditioning">3.3 Calculating expectation by conditioning</a>
+    </span>
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#lec-10">Lec 10</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#3.4-computing-prob-by-conditioning">3.4 computing prob by conditioning</a>
+    </span>
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#lec-12">Lec 12</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#3.5-calculating-variance-by-conditioning">3.5 Calculating variance by conditioning</a>
+    </span>
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#lec-13">Lec 13</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#ch-4-probability-generating-function-(pgf)">ch 4 probability generating function (pgf)</a>
+    </span>
+    <span class="md-toc-item md-toc-h3">
+        <a class="md-toc-inner" href="#4.1-generating-function-(gf)">4.1 generating function (gf)</a>
+    </span>
+    <span class="md-toc-item md-toc-h3">
+        <a class="md-toc-inner" href="#power-series">power series</a>
+    </span>
+    <span class="md-toc-item md-toc-h4">
+        <a class="md-toc-inner" href="#commonly-used-power-series">commonly used power series</a>
+    </span>
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#lec-14">Lec 14</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#4.2-probablity-generating-function-(pgf)">4.2 Probablity generating function (pgf)</a>
+    </span>
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#lec-15">Lec 15</a>
+    </span>
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#lec-16">Lec 16</a>
+    </span>
+    <span class="md-toc-item md-toc-h2">
+        <a class="md-toc-inner" href="#4.3-simple-random-walk">4.3 Simple random walk</a>
+    </span>
+    <span class="md-toc-item md-toc-h1">
+        <a class="md-toc-inner" href="#lec-17">Lec 17</a>
+    </span>
+    </p>
+</div><h1 id="lecture-2"><a class="header-link" href="#lecture-2"></a>Lecture 2</h1>
+<ul class="list">
+<li>Prob model</li>
+<li>independence</li>
+</ul>
+<h2 id="introduction"><a class="header-link" href="#introduction"></a>Introduction</h2>
+<h3 id="basic-concepts-of-prob-theory"><a class="header-link" href="#basic-concepts-of-prob-theory"></a>Basic concepts of prob theory</h3>
+<h4 id="**prob-model**"><a class="header-link" href="#**prob-model**"></a><strong>Prob model</strong></h4>
+<p>it has three components: sample space, events, prob function</p>
+<ul class="list">
+<li><strong>Sample space</strong>: all possible outcomes of a random experiment</li>
+</ul>
+<p>Eg: toss a die once. sample space = {1,2,3,4,5,6}</p>
+<p><strong>Events</strong>: roughly speaking: event = subset of sample space
+Eg: E = {2,4,6} = outcome is even</p>
+<p><strong>prob function</strong>: Notation \(P\)
+prob function is a function of event &amp; it satisfies 3 conditions</p>
+<ol class="list">
+<li><p>\(0\le P(E)\le 1\)  for any event \(E\)</p>
+</li>
+<li><p>\(P(sample ~space) = 1\)</p>
+</li>
+<li><p>additivity
+Suppose we have a sequence of disjoint events, \(E_1, E_2, \ldots\), i.e. \(E_i\cap E_j=\emptyset, i\neq j\), then \(P(\bigcup_{i=1}^\infty E_i) = \sum_{i=1}^\infty P(E_i)\)</p>
+</li>
+</ol>
+<p>   Eg: toss a dice and define \(P(E) = {\text{# of outcoms in E} \over 6} \implies P\) is prob function</p>
+<p><strong>properties of prob function </strong></p>
+<ol class="list">
+<li>If \(E_1 \subset E_2\), then \(P(E_1) \leq P(E_2)\)</li>
+<li>If \(E_1\cap E_2 = \emptyset\), then \(P(E_1\cup E_2) = P(E_1) + P(E_2)\)</li>
+<li>\(P(\emptyset) = 0\)</li>
+<li>\(P(E)+P(E^C) = 1\) (\(E^C\): complementary set of \(E\))</li>
+<li>\(P(E_1\cup E_2) = P(E_1)+P(E_2)-P(E_1\cap E_2)\)</li>
+</ol>
+<h4 id="**indepdence**"><a class="header-link" href="#**indepdence**"></a><strong>Indepdence</strong></h4>
+<p>Suppose we have two events \(E \&amp; F\). They are independent if \[\underbrace{P( E\cap F) }_{joint ~ prob} = P(E) * P(F)\]</p>
+<p>The latter one is marginal probs or unconditional probs.</p>
+<p>Independent \(\implies\) joint = product of marginals.
+More than two envents will not be covered.</p>
+<p><strong>A simple and useful fact</strong></p>
+<p>Suppose we have a sequence of independent trials and a sequence of events \(E_1,E_2,\ldots\)</p>
+<p>Now: \(E_i\) only depends on its trial</p>
+<p>Then: \(E_1, E_2,\ldots\) are independent
+and \[\displaystyle P\left(\bigcap_{i=1}^\infty E_i\right) = \prod_{i=1}^\infty P(E_i) \qquad P\left(\bigcap_{i=1}^m E_i\right) = \prod_{i=1}^m P(E_i) \]</p>
+<h1 id="lecture-3"><a class="header-link" href="#lecture-3"></a>Lecture 3</h1>
+<h2 id="conditional-prob"><a class="header-link" href="#conditional-prob"></a>conditional prob</h2>
+<p><strong>defn</strong>: Suppose we have two events: \(E\&amp; F \&amp; P(F)&gt;0\), then \(P(E|F) = \dfrac{P(E\cap F)}{P(F)}\)</p>
+<ul class="list">
+<li>Result1: \(P(E\cap F) = P(E|F) P(F)\) [multiplication rule]</li>
+<li>Result2: If \(E\&amp;F\) are independent, the \(P(E|F)=P(E)\)</li>
+</ul>
+<h2 id="bayesian-formula"><a class="header-link" href="#bayesian-formula"></a>Bayesian formula</h2>
+<p>Suppose  we have a sequence of events \(F_1,F_2,\ldots\), such that
+\[
+\begin{cases}
+\bigcup_i F_i = \text{sample space} \\
+F_i\cap F_j = \emptyset &amp;i\neq j \\
+P(F_i)&gt;0
+\end{cases}
+\]
+Then
+\[
+\begin{aligned}
+P(E) &amp;=\sum_iP(E\cap F_i) \\
+&amp;=\sum_i P(E|F_i)P(F_i) \\
+\end{aligned}
+\implies
+P(E)=\sum_iP(E|F_i) P(F_i)
+\]
+Law of total prob. [divide and conquer method]</p>
+<p>Next:
+\[
+\begin{aligned}
+P(F_k|E) &amp;= {P(E\cap F_k) \over P(E)} \\
+&amp;= {P(E|F_k) P(F_k) \over \sum_i P(E|F_i)P(F_i)}
+\end{aligned}
+\]</p>
+<h2 id="random-variables"><a class="header-link" href="#random-variables"></a>random variables</h2>
+<p><strong>Def</strong>: A rv is a function defined on sample space to real time</p>
+<p>X: sample space (domain) -&gt; real time (range)</p>
+<h3 id="two-types-of-rvs-in-this-course"><a class="header-link" href="#two-types-of-rvs-in-this-course"></a>two types of rvs in this course</h3>
+<ol class="list">
+<li>Discrete: all possible values are at most countable (possion rv)</li>
+<li>Conitinuous: all possible values contain an interval (exponential distribution)</li>
+</ol>
+<p>Next: important rvs</p>
+<h1 id="lec-4"><a class="header-link" href="#lec-4"></a>Lec 4</h1>
+<h2 id="bernulli-trails"><a class="header-link" href="#bernulli-trails"></a>Bernulli Trails</h2>
+<p>(1) each trail has 2 outcomes: \(S\) &amp; \(F\).
+(2) all trails are independent
+(3) prob of \(S\) on each trial are the same.</p>
+<p><strong>Notation</strong> \(p = Pr(<code>S&quot;) ~~ ~~q = 1-p=Pr(</code>F&quot;)\)</p>
+<p><strong>Bernoulli rvs</strong> Notation Bernoulli (p)</p>
+<p>Let
+\[
+I_i=\begin{cases}
+1 &amp; \text{if S appears on the ith trail} \\
+0 &amp; \text{otherwise}
+\end{cases}
+\]
+Then \(Pr(I_i=1)=p\) &amp; \(P_r(I_i=0)=q\)  &amp; \(I_1,I_2,\ldots,I_n,\ldots\) are a sequence of iid (independent identically distributed) Bernoulli rvs.</p>
+<h2 id="binomial-rv"><a class="header-link" href="#binomial-rv"></a>Binomial rv</h2>
+<p>Notation \(Bin(n,p)\)</p>
+<p>\(X=\)# of &quot;S&quot; in \(n\) Bernoullli trials \(\sim Bin(n,p)\)
+n = # of Bernoulli trials [fixed]          p is prob of &quot;S&quot;</p>
+<p><strong>Range</strong> \({0,1,\ldots,n}\)         \(P(X=k)=\underbrace{\binom{n}{k}p^k(1-p)^{n-k} }_{\text{prob mass function} }\)     \(k=0,1,2,\ldots, n\)</p>
+<ul class="list">
+<li>Result 1:\(X=\sum_{i=1}^n I_i\) where \(I_1,\ldots, I_n\) are iid Bernoulli rvs, \(X\) is binomial</li>
+<li>Result 2: If \(X_1\sim Bin(n_1,p), X_2\sim Bin(n_2,p)\) and they are independent, then \(X_1+X_2 \sim Bin(n_1+n+2,p)\)</li>
+</ul>
+<p>Why?</p>
+<p>\(X_1=\) # of &quot;S&quot; in first \(n_1\) trials (Bernoulli trials)
+\(X_2=\) # of &quot;S&quot; in next \(n_2\) trials (Bernoulli trials)</p>
+<p><strong>Indepdent</strong> no overlaps between two groups of trials</p>
+<h2 id="geometric-rv"><a class="header-link" href="#geometric-rv"></a>Geometric rv</h2>
+<p>Geo(p)</p>
+<p>First waiting time rv</p>
+<p>\(X=\) # of <strong>_trials_</strong> to get first &quot;S&quot; in the sequence of Bernoulli trials</p>
+<p>Range of \(X={1,2,\ldots}\)       \(E[X]={1\over p}\)</p>
+<p>prob mas function \(P(X=k)=(1-p)^{k-1} p\)      \(k=1,2,3,\ldots\)</p>
+<p><strong>property</strong> No-memory property</p>
+<p>\(P(X&gt;n+m|X&gt;m)=P(X&gt;n)=P(X-m&gt;n|X&gt;m)\)</p>
+<ul class="list">
+<li>\(X&gt;m\) : at time \(m\) , we don&#39;t observe &quot;S&quot;</li>
+<li>\(X-m\) : remaining time</li>
+</ul>
+<p><strong>Formula tells us</strong>  given that we don&#39;t observe the event &quot;S&quot;, the remaining time \(\sim Geo(p)\)</p>
+<p><strong>That is</strong> As long as we don&#39;t observe the event, remaining time and original time have same distribution \(Geo(p)\) s</p>
+<h1 id="lec-5"><a class="header-link" href="#lec-5"></a>Lec 5</h1>
+<h2 id="negtive-binomial"><a class="header-link" href="#negtive-binomial"></a>Negtive Binomial</h2>
+<p>\(NegBin(r, p)\) &amp; \(X=\sum_{i=1}^v X_i:\) \(X_1, \ldots, X_v\) are iid Geo(p) rvs</p>
+<h2 id="possion-rv:-pois-(\(\lambda\))"><a class="header-link" href="#possion-rv:-pois-(\(\lambda\))"></a>Possion rv: pois (\(\lambda\))</h2>
+<p>Range of X = {0, 1, 2, ...}</p>
+<p>pmf: \(P(X=k)= {\lambda^k e^{-\lambda} \over k!}\)  \(k=0,1,2,\ldots\)</p>
+<p><strong>Here</strong> \(\lambda\) (1)rate parameter (2) \(\lambda=E(X)\)</p>
+<p><strong>Property</strong> Suppose \(X_1\sim pois(\lambda_1) \&amp; X_2\sim pois (\lambda_2)\) and they are independent, then \(X_1+X_2 \sim pois(\lambda_1+\lambda_2)\)</p>
+<h2 id="exponential-rv:-\(\exp(\lambda)\)"><a class="header-link" href="#exponential-rv:-\(\exp(\lambda)\)"></a>Exponential rv: \(\exp(\lambda)\)</h2>
+<p>The continuous waiting time rv.</p>
+<p>probability density function (pdf):
+\[
+f(x)=\begin{cases}
+\lambda e^{-\lambda x} &amp; x&gt;0 \\
+0 &amp; otherwise
+\end{cases}
+\]
+<strong>properties </strong>: (a) \(\lambda\): rate parameter = \({1\over expectation}\)<br>               \(E(x)={1\over \lambda}\) if \(X\sim \exp(\lambda)\)</p>
+<p>​                 (b) tail prob: \(P(X &gt;t) = e^{-\lambda t}\qquad t&gt;0\)  (at time t, we don&#39;t observe the event)</p>
+<p>​                    (c) No-memory property: missing pic</p>
+<p><strong>No memory property meaning</strong> : As long as we don&#39;t observe the event, Remaining time \(k\) original time both \(\sim \exp(\lambda)\)</p>
+<h2 id="expectation-&-variance"><a class="header-link" href="#expectation-&-variance"></a>Expectation &amp; Variance</h2>
+<p><strong>Discrete rv</strong>: \(X\) with range \({x_0, x_1,\ldots, x_n, \ldots}\)
+Then \(E(x)= \sum_{i=0}^\infty \underbrace{x_i}_{value} \times P(X=x_i)\)</p>
+<p><strong>Continous rv</strong>: \(X\) with pdf f(x), then \(\displaystyle E(x)= \int_{-\infty}^\infty x f(x)dx\)</p>
+<p><strong>General case</strong>: \(E[g(x)]\)       \(g(x)\) is a real-function
+\[
+E[g(x)]=\begin{cases}
+\sum_{i=0}^\infty g(x_i)P(X=x_i) &amp; \text{discrete case} \\
+\int_{-\infty}^\infty g(x) f(x)dx &amp; \text{continuous case}
+\end{cases}
+\]
+<strong>variance</strong>: \(var[X]=E[(X-E(X))^2] = E(X^2)-E^2(X)\)</p>
+<p><strong>covariance</strong> \(cov(X,Y)=E[(X-E(X))(Y - E(Y))] = E(XY)-E(X)E(Y)\)</p>
+<p>If X and Y are independent, then \(cov(X,Y)=0\)</p>
+<p><strong>Properties</strong>:</p>
+<ol class="list">
+<li><p>\(E[\sum_{i=1}^n a_i X_i] = \sum_{i=1}^n a_i E(X_i)\)   Linearity
+\(a_1, \ldots, a_n\) are constants and \(X_1,\ldots, X_n\) are rvs</p>
+</li>
+<li><p>If \(X_1, \ldots, X_n\) are independent, \(var(\sum_{i=1}^n a_i X_i) = \sum_{i=1}^n a_i^2 ~~var(X_i)\)</p>
+</li>
+<li><p>In general:
+\[
+var(\sum_{i=1}^n a_i X_i) = \sum{i=1}^n a_i^2 ~~var(X_i) + \sum_{i\neq j} a_i a_j ~cov (X_i, X_j) \\
+=\sum{i=1}^n a_i^2 ~~var(X_i) + 2\sum_{i&lt; j} a_i a_j ~cov (X_i, X_j)
+\]</p>
+</li>
+</ol>
+<h1 id="lec-6"><a class="header-link" href="#lec-6"></a>Lec 6</h1>
+<h2 id="indicator-rvs"><a class="header-link" href="#indicator-rvs"></a>indicator rvs</h2>
+<p><strong>Indication rv</strong> only two variables 0 &amp; 1</p>
+<p>For a given event A, we define
+\[
+I_A =\begin{cases}
+1 &amp; \text{if A occurs} \\
+0 &amp; otherwise
+\end{cases}
+\]
+Let \(P(A)=p \implies P(I_A=1)= p \qquad \&amp; \qquad P(I_A=0)=q=1-p\)</p>
+<h2 id="chapter-2-waiting-time-rcs"><a class="header-link" href="#chapter-2-waiting-time-rcs"></a>chapter 2 waiting time rcs</h2>
+<p>Suppose we have a sequence of trials &amp; we are interested in observing event E based on trials.</p>
+<p>\(T_E\) = # of trials or waiting time to observe first E.</p>
+<p>Range of \(T_E=\underbrace{ {1,2,\ldots} }_{we~can~observe~E}\cup \underbrace{ {\infty} }_{we~can&#39;t}\)</p>
+<p>We are intersted in</p>
+<ol class="list">
+<li>If \(P(T_E &lt; \infty) &lt; 1\) or \(P(T_E=\infty)&gt;0\)</li>
+<li>If \(P(T_E &lt; \infty) = 1\) , what is \(E(T_E)\)?</li>
+</ol>
+<p><strong>Classification of \(T_E\)</strong></p>
+<ol class="list">
+<li><p>If  \(P(T_E &lt; \infty) &lt; 1\) , then \(T_E\) is improper</p>
+</li>
+<li><p>If \(P(T_E &lt; \infty) =1\), then \(T_E\) is proper</p>
+<p>2.1 If \(E(T_E)=\infty\), \(T_E\) is NULL proper</p>
+<p>2.2 If \(E(T_E)&lt;\infty\), \(T_E\) is short proper</p>
+</li>
+</ol>
+<h1 id="lec-7"><a class="header-link" href="#lec-7"></a>Lec 7</h1>
+<ol class="list">
+<li><p>If \(T_E\) is improper, then \(E(T_E)=\infty\)  . since
+\[
+E(T_E) = \1_P(T_E=1)+2_P(T_E=2)+\ldots+\underbrace{\infty*P(T_E=\infty)}_{=\infty} = \infty
+\]</p>
+</li>
+<li><p>If \(E(T_E)&lt;\infty\), then \(T_E\) is short proper, we do not need to verify \(P(T_E&lt;\infty)=1\)</p>
+</li>
+</ol>
+<p><strong>Aside</strong>
+\[
+\sum_{n=1}^\infty a_n = \lim_{m\to\infty} \sum_{n=1}^m a_n \\
+\prod_{n=1}^\infty a_n = \lim_{m\to\infty}\prod_{n=1}^ma_n
+\]
+Note, in \(\sum_{n=1}^\infty a_n \&amp; \prod_{n=1}^\infty a_n \), we do not include \(\infty\) term. Hence, \(P(T_E&lt;\infty)= \sum_{n=1}^\infty P(T_E=n)\)</p>
+<h2 id="chapter-3-conditional-expectation"><a class="header-link" href="#chapter-3-conditional-expectation"></a>Chapter 3 Conditional expectation</h2>
+<h3 id="3.1-joint-rvs"><a class="header-link" href="#3.1-joint-rvs"></a>3.1 joint rvs</h3>
+<p>We consider 2rvs</p>
+<h4 id="joint-discrete:-x-&-y"><a class="header-link" href="#joint-discrete:-x-&-y"></a>Joint discrete: X &amp; Y</h4>
+<p>If X &amp; Y are two discrete rvs, then X &amp; Y together is called joint discrete.</p>
+<ul class="list">
+<li><p>Joint pmf: \(f_{X,Y}(x,y)=P(X=x, Y=y)\)</p>
+</li>
+<li><p>Properties</p>
+<ul class="list">
+<li>Joint pmf is pmf \(\begin{cases} f_{X,Y}(x,y)\ge 0 \ \sum_x \sum_y  f_{X,Y}(x,y) = 1\end{cases}\)</li>
+</ul>
+<p>*</p>
+<ul class="list">
+<li>\[
+f_X(x)=P(X=x)=\sum_y f_{X,Y}(x,y) \qquad \text{marginal pmf of X}
+\\
+f_Y(y)=P(Y=y)=\sum_x f_{X,Y}(x,y) \qquad \text{marginal pmf of Y}
+\]</li>
+</ul>
+</li>
+<li><p>Joint expectation: \(E[h(X,Y)]\)    \(h(x,y)\) is a real function
+\(E[h(X,Y)]=\sum_x\sum_y h(x,y)*f_{X,Y}(x,y)\)</p>
+</li>
+</ul>
+<p><strong>EG</strong>  \(E(XY)=\sum_x\sum_y xy f_{X,Y}(x,y)\)
+       \(E(X)= \sum_x\sum_y x f_{X,Y}(x,y) = \sum_x x f_X(x)\)</p>
+<h4 id="joint-continuous"><a class="header-link" href="#joint-continuous"></a>joint continuous</h4>
+<p>If X &amp; Y are two continuous rvs and
+\[
+P(X\le x, Y\le y)=\int_{-\infty}^x\left[\int_{-\infty}^y f_{X,Y}(s,t) dt\right] ds
+\]
+<strong>properties</strong></p>
+<ol class="list">
+<li><p>\(f_{X,Y}(x,y)\) is a pdf</p>
+<ul class="list">
+<li>\(f_{X,Y}(x,y) \ge 0\)</li>
+<li>\(\int_{-\infty}^\infty\int_{-\infty}^\infty f_{X,Y}(x,y) dxdy = 1\)</li>
+</ul>
+</li>
+<li><p>\(\text{}\)
+\[
+f_X(x)=\int_{-\infty}^\infty f_{X,Y}(x,y) dy \qquad marginal~pdf~of~X \\
+f_Y(y)=\int_{-\infty}^\infty f_{X,Y}(x,y) dx \qquad marginal~pdf~of~Y
+\]</p>
+</li>
+</ol>
+<p><strong>expectation</strong>
+\[
+E[h(X,Y)]=f_X(x)=\int_{-\infty}^\infty \int_{-\infty}^\infty h(x,y) f_{X,Y}(x,y) dx dy \\
+E[X]=\int_{-\infty}^\infty \int_{-\infty}^\infty x f_{X,Y}(x,y) dx dy= \int_{-\infty}^\infty x f_X(x)dx
+\]
+<strong>independence</strong> both discrete and continuous</p>
+<p>If \(f_{X,Y}(x,y)=f_X(x)f_Y(y)\), then X and Y are independent. i.e. joint = product of marginal</p>
+<p><strong>property</strong> If X and Y are indepdent, \(g(X)\&amp; h(Y)\) are independent</p>
+<h1 id="lec-8"><a class="header-link" href="#lec-8"></a>Lec 8</h1>
+<p><strong>property</strong></p>
+<ol class="list">
+<li>If X &amp; Y are independent, then \(g(X)\&amp;h(Y)\) are independent.</li>
+<li>If X &amp; Y are independent, then \(E[g(X)h(Y)]=E[g(X)]E[h(Y)]\)</li>
+</ol>
+<p><strong>Note</strong> \(Cov(X,Y)=0\) does not imply X &amp; Y are independent.</p>
+<h2 id="3.2-conditional-distribution-&-conditional-expectation"><a class="header-link" href="#3.2-conditional-distribution-&-conditional-expectation"></a>3.2 Conditional distribution &amp; Conditional expectation</h2>
+<ul class="list">
+<li><p>discrete case: notation: \(f_{X,Y}(x,y)\to\) joint pmfs</p>
+</li>
+<li><p><strong>Def</strong> For a given \(y\), the conditional pmf of \(x\) given \(Y=y\) is
+\[
+f_{X|Y}(x|y)={f_{X,Y}(x,y)\over f_Y(y)}={Joint\over marginal} \quad f_Y(y)&gt;0
+\]</p>
+</li>
+<li><p>Property: \(f_{X|Y}(x|y)\) is a pmf
+_That is_ (1) \(f_{X|Y}(x|y)\ge 0\),  (2) \(\sum_x f_{X|Y}(x|y) = 1\)</p>
+</li>
+</ul>
+<p>Proof is trivial</p>
+<p><strong>Conditional Expectation</strong></p>
+<p>The conditional expectation of \(x\) given \(Y=y\) is
+\[
+E(X|Y=y)=\sum_x_f_{X|Y}(x|y)
+\]
+The conditional expectation of \(g(x)\) given \(Y=y\) is
+\[
+E[g(x)|Y=y]=\sum_x g(x)_f_{X|Y}(x|y)
+\]</p>
+<h1 id="lec-9"><a class="header-link" href="#lec-9"></a>Lec 9</h1>
+<h3 id="properties-of-conditional-expectation"><a class="header-link" href="#properties-of-conditional-expectation"></a>properties of conditional expectation</h3>
+<ol class="list">
+<li><p>Conditional expectation has all properties of expectation. Eg
+\[
+E(\sum_{i=1}^na_iX_i|Y)=\sum_{i=1}^na_iE(X_i|Y)
+\]</p>
+</li>
+<li><p>Substitution rule
+\[
+E[X_g(Y)|Y=y]=E[X_g(y)|Y=y]=g(y)_E(X|Y=y)
+\]
+Eg: \(E(X_Y|Y=y)=y*E(X|Y=y)\)</p>
+<p>In general: \(E(h(X,Y)|Y=y)=E(h(X,y)|Y=y)\)</p>
+</li>
+<li><p>Independence property. If X &amp; Y are independent, then
+\[
+f_{X|Y}(x|y)={f_{X,Y}(x,y)\over f_Y(y)}={f_X(x)f_Y(y)\over f_Y(y)}=f_X(x)
+\]</p>
+<p>\[
+\implies E(X|Y=y)=E(x)~~\&amp;\ E[g(X)|Y=y]=E[g(X)]
+\]</p>
+</li>
+</ol>
+<h2 id="3.3-calculating-expectation-by-conditioning"><a class="header-link" href="#3.3-calculating-expectation-by-conditioning"></a>3.3 Calculating expectation by conditioning</h2>
+<p>This section we cover: \(E(X)=E[E(X|Y)]\)  </p>
+<p>​                Law of total expectation/double expectation</p>
+<p><strong>step 1</strong> what is \(E(X|Y)?\)</p>
+<p>(a) \(E(X|Y)\) is a rv &amp; dependents on \(Y\). say \(E(X|Y)=g(Y)\to\) \(E(X|Y)\) depends on \(Y\).</p>
+<p>(b) given \(Y=y\), the function of \(g(Y)\), \(\underbrace{g(y)=E(X|Y=y)}_{\text{in section 3.2} }\)</p>
+<p>​    <strong>eg</strong> eg3.1: \(E(X|Y=y)=y{\lambda_1\over \lambda_1+\lambda_2}\implies g(y)=y{\lambda_1\over \lambda_1+\lambda_2}\)</p>
+<p>​          eg3.2: \(E(X|Y=y)={2\over y}\implies g(y)={2\over y}\)</p>
+<p><strong>step2</strong> How to get \(E(X|Y)\)?</p>
+<p>(a) figure out \(g(y)=E(X|Y=y)\) first by definitions/by properties</p>
+<p>(b) \(E(X|Y)\) is just \(g(Y)\).</p>
+<p><strong>step 3</strong> how to apply \(E(X)=E(E(X|Y))\)
+\[
+E(X)=E(E(X|Y))=E[g(Y)]\\
+=\begin{cases}
+\sum_y g(y)_f_Y(y) &amp; discrete~case\\
+\int_{-\infty}^\infty g(y)_f_Y(y)dy &amp; continuous~case
+\end{cases}
+\\
+=\begin{cases}
+\sum_y E(X|Y=y)f_Y(y) &amp; discrete~case\\
+\int_{-\infty}^\infty E(X|Y=y)*f_Y(y)dy &amp; continuous~case
+\end{cases}
+\]
+<strong>comments:</strong> \(E(X)=E[E(X|Y)]\) is applicable to all expectations</p>
+<h1 id="lec-10"><a class="header-link" href="#lec-10"></a>Lec 10</h1>
+<h2 id="3.4-computing-prob-by-conditioning"><a class="header-link" href="#3.4-computing-prob-by-conditioning"></a>3.4 computing prob by conditioning</h2>
+<p>Suppose A is an event and we are interested in \(P(A)\)</p>
+<p>Let \(I_A= \begin{cases} 1 &amp; \text{if A occurs } \ 0 &amp;\text{otherwise}\end{cases}\)
+\[
+P(A)=E(I_A)=E(E(I_A|Y))= \begin{cases}
+\sum_y E(I_A|Y=y)f_Y(y)&amp;discrete~Y \\
+\int_{-\infty}^\infty E(I_A|Y=y)f_Y(y)dy &amp; continuous~Y
+\end{cases} \\
+=\begin{cases}
+\sum_y E(A|Y=y)f_Y(y)&amp;discrete~Y \\
+\int_{-\infty}^\infty E(A|Y=y)f_Y(y)dy &amp; continuous~Y
+\end{cases}
+\]</p>
+<h1 id="lec-12"><a class="header-link" href="#lec-12"></a>Lec 12</h1>
+<h2 id="3.5-calculating-variance-by-conditioning"><a class="header-link" href="#3.5-calculating-variance-by-conditioning"></a>3.5 Calculating variance by conditioning</h2>
+<p><strong>Method1</strong> By defn</p>
+<p>Recall
+\[
+Var(X)=E(X^2)-[E(X)]^2\\
+E(X^2)=E[E(X^2|Y)]\\
+E(X)=E[E(X|Y)]
+\]
+This method has been covered before.</p>
+<p><strong>Method2</strong> Conditional variance.</p>
+<p>Given \(Y=y\), the coditional variance of \(X\) is given as
+\[
+Var(X|Y=y)=E(X^2|Y=y)-[E(X|Y=y)]^2
+\]
+<strong>Note</strong> \(Var(X|Y=y)\) depends on \(y\) and is a function \(y\), say
+\[
+Var(X|Y=y)=h(y)
+\]
+<strong>EG</strong> \(X|Y=y \sim pois(y) \implies Var(X|Y=y)=y \implies h(y)=y\)
+Then, apply \(h(y)\) to \(Y\), we get a r.v. This rv is denoted as \(Var(X|Y)=h(Y)\)</p>
+<p>Basically: \(Var(X|Y)=h(Y)=E(X^2|Y)-[E(X|Y)]^2\) conditional variance variance of \(X\) given \(Y\).</p>
+<p>Two steps to find \(Var(X|Y)\)</p>
+<ul class="list">
+<li>Step1: find \(h(y)=Var(X|Y=y)\)</li>
+<li>Step 2: apply \(h(y)\) to \(Y\) to get \(var(X|Y)=h(Y)\)</li>
+</ul>
+<p>Comments:</p>
+<ol class="list">
+<li>Substitution rule is still applcable</li>
+<li>If X &amp; Y are independent, then \(var(X|Y=y)=var(X)\)</li>
+</ol>
+<p><strong>THEOREM</strong>
+\[
+Var(X)=E[\underbrace{var(X|Y)}_{\ge 0}]+var[E(X|Y)]
+\]
+From \(X\) to \(E(X|Y)\)</p>
+<p>1st \(E(X)=E(E(X|Y))\)</p>
+<p>2nd \(Var(X)\ge Var(E(X|Y))\)</p>
+<p><strong>PROOF</strong></p>
+<p>_LHS_ \(Var(X)=E(X^2)-[E(X)]^2\)
+\[
+\begin{aligned}
+RHS =&amp; E(var(X|Y)) + var[E(X|Y)]\\
+=&amp; E[E(X^2|Y) - \cancel{ {E(X|Y)}^2}] \&amp;+ E[\cancel{ {E(X|Y)}^2} }]-{E[E(X|Y)]}^2 \\
+=&amp; E(X^2)-[E(X)]^2=LHS
+\end{aligned}
+\]</p>
+<p><strong>Method3</strong> Compound rv formula: [random sum of iid rvs]</p>
+<p>Suppose \(X_1, X_2,\ldots, X_n, \ldots\) are a sequence of iid res.</p>
+<p>N: a rv only takes non-negative integers.</p>
+<p><strong>Further</strong> N &amp; \(X_1, \ldots\) are independent.</p>
+<p>Then \(W=\sum_{i=1}^N X_i\): compound rv.  [If \(N=0\), then \(W=0\)]</p>
+<p><strong>Thm</strong>: \(E(W)=E(N)_ E(X_1) \quad \&amp; \quad var(W)=E(N)_ var(X_1)+var(N)*[E(X_1)]^2\)</p>
+<p><strong>PROOF</strong>
+\[
+E(W)=E(E(W|N))\\
+\begin{aligned}
+E(W|N=n)&amp;= E\left(\sum_{i=1}^NX_i|N=n\right)\\
+&amp;=E\left(\sum_{i=1}^nX_i|N=n\right)\\
+&amp;=E\left(\sum_{i=1}^nX_i\right)\\
+&amp;= n*E(X_1)
+\end{aligned}
+\]</p>
+<p>\[
+\implies E(W|N)=N_E(X_1)\\
+\implies E(W)=E(E(W|N))=E(N_E(X_1))=E(N)_E(X_1)\\
+Var(W)=E[Var(W|N)]+Var[\underbrace{E(W|N)}_{N_E(X_1)}]
+\]</p>
+<p>\(Var(W|N)?\)
+\[
+\begin{aligned}
+Var(W|N=n)&amp;= var\left(\sum_{i=1}^N X_i |N=n\right) \\
+&amp;= var\left(\sum_{i=1}^n X_i |N=n\right) \\
+&amp;= var\left( \sum_{i=1}^n X_i\right) \quad X_1,\ldots, X_n\&amp;N~indepdent \\
+&amp;= \sum_{i=1}^n var(X_i) \qquad X_1,\ldots, X_n~are~i.i.d\\
+&amp;=n*var(X_1)
+\end{aligned}
+\]</p>
+<p>\[
+\implies Var(W|N)=N*var(X_1)
+\]</p>
+<p><strong>Next</strong>
+\[
+\begin{aligned}
+Var(W)&amp;=E[var(W|N)]+var[E(W|N)]\\
+&amp;=E[N_var(X_1)]+var(N_E(X_1))\\
+&amp;=E(N)_var(X_1)+var(N)_[E(X_1)]^2
+\end{aligned}
+\]</p>
+<h1 id="lec-13"><a class="header-link" href="#lec-13"></a>Lec 13</h1>
+<p>examples &amp; advice on midterm1</p>
+<h2 id="ch-4-probability-generating-function-(pgf)"><a class="header-link" href="#ch-4-probability-generating-function-(pgf)"></a>ch 4 probability generating function (pgf)</h2>
+<h3 id="4.1-generating-function-(gf)"><a class="header-link" href="#4.1-generating-function-(gf)"></a>4.1 generating function (gf)</h3>
+<p><strong>defn</strong> given a sequence of real # \(s\) \({a_n}_{n=0}^\infty\), define
+\[
+A(s)=\sum_{n=0}^\infty a_n s^n
+\]</p>
+<h3 id="power-series"><a class="header-link" href="#power-series"></a>power series</h3>
+<p>According to values of \({a_n}_{n=0}^\infty\), we have 3 situations:</p>
+<ol class="list">
+<li>\(A(s)\) converges only at \(s=0\)</li>
+<li>\(A(s)\) converges when \(|s|&lt;R\) for some \(R&gt;0\) &amp; diverges when \(|s|&gt;R\).</li>
+<li>\(A(s)\) converges when \(|s|&lt;\infty\), here \(R=\infty\)</li>
+</ol>
+<p>When we have cases 2 &amp; 3, \(A(s)\) is called generating function of \({a_n}_{n=0}^\infty\) and \(R\) is called convergence radius</p>
+<p><strong>eg</strong> (1) \(a_n=1\) for \(n\ge 0\), \(A(s)=\sum_{n=0}^\infty s^n = \begin{cases}{1\over 1-s} &amp; |s|<1 \\ diverges & |s|>1 \end{cases} \implies R=1\)</p>
+<p>(2) \(a_n={1\over n!}\) for \(n\ge 0\), \(A(s)=\sum_{n=0}^\infty {1\over n!}s^n=e^s\) for \(|s|&lt;\infty \implies R=\infty\)</p>
+<p><strong>THeorem</strong> There is a one-to-one correspondence between \({a_n}_{n=0}^\infty\) and \(A(s)\)</p>
+<p>(1) Given \({a_n}_{n=0}^\infty\), \(A(s)\) is uniquely defined</p>
+<p>(2) Given \(A(s)\), then \({a_n}_{n=0}^\infty\) is uniquely determined.</p>
+<p><strong>uniquely determined</strong> given \(A(s)\) \(\begin{cases}a_0=A(0) \ a_n={A^{(n)}(0) \over n!} &amp; for ~n\ge 1 \end{cases}\)</p>
+<h4 id="commonly-used-power-series"><a class="header-link" href="#commonly-used-power-series"></a>commonly used power series</h4>
+<ol class="list">
+<li>Geometric: \(A(s)=\sum_{n=0}^\infty s^n = {1\over 1-s}, \quad R=1\). \(a_n=1\) for \(n\ge 0\)</li>
+<li>Altenative Geometric \(A(s)=\sum_{n=0}^\infty (-1)^ns^n = {1\over 1+s}\)   \(R=1\).  \(a_n=(-1)^n\)  for \(n\ge 0\).</li>
+<li>Exponential \(A(s)=\sum_{n=0}^\infty {1\over n!}s^n\)  \(R=\infty\).  \(a_n={1\over n!}, n\ge 0\)</li>
+<li>Binomial \(A(s)=(1+s)^n = \sum_{R=0}^n\binom{n}{R}s^R\)
+\(\begin{cases}a_R=\binom{n}{R} &amp; R=0,1,2\ldots, n\a_k=0 &amp; R\ge n+1\end{cases}\)
+\(n\) is postive integer, \(R=\infty\)</li>
+<li>general binomial
+\((1+s)^\alpha = \sum_{n=0}^\infty\binom{\alpha}{n}s^n\),  \(\alpha\) is a real # (not postive integer)
+\(\binom{\alpha}{n}={\alpha(\alpha-1)\ldots(\alpha-n+1)\over n!}\)  &amp;  \(R=1\)</li>
+</ol>
+<h1 id="lec-14"><a class="header-link" href="#lec-14"></a>Lec 14</h1>
+<p>\[
+\binom{-1\over 2}{n}=\left(-{1\over 4}\right)^n\binom{2n}{n}
+\]</p>
+<p>Properties of gf
+\[
+A(s)=\sum_{n=0}^\infty a_n s^n \qquad B(s)=\sum_{n=0}b_ns^n
+\]
+Let \(R_A, R_B\) be convergence radius</p>
+<ol class="list">
+<li><p>Summation
+\[
+C(s)=A(s)+B(s)=\sum_{n=0}^\infty a_n s^n + \sum_{n=0}^\infty s^n =\sum_{n=0}^\infty(a_n+b_n)s^n
+\]
+\(c_n = a_n+b_n\)     \(R_C = \min(R_A,R_B)\)
+\[
+C(s)=A(s)-B(s)=\sum_{n=0}^\infty(a_n-b_n)s^n
+\]
+\(c_n=a_n-b_n\)     \(R(c)=\min(R_A,R_B)\)</p>
+</li>
+<li><p>Product
+\[
+C(s)=A(s)*B(s)=\sum_{n=0}^\infty c_ns^n
+\]
+\(c_n=\underbrace{\sum_{k=0}^n a_kb_{n-k} }_{n+1~terms} \ne a_nb_n\)</p>
+<p>\(R_C=\min (R_A,R_B)\)</p>
+<p>That is
+\[
+\left(\sum_{n=0}^\infty a_n s^n\right)\left(\sum_{n=0}^\infty b_n s^n\right)
+=\sum_{n=0}^\infty \left(\sum_{k=0}^n a_k b_{n-k}s^n\right)
+\]
+[convolution of \(A(s)\) &amp; \(B(s)\)]</p>
+</li>
+</ol>
+<p><strong>e.g.</strong> find \({c_n}_{n=0}^\infty\) &amp; \(R_C\)</p>
+<ol class="list">
+<li>\(C(s)={1\over 1-s}*{1\over 1+s}\)     2. \(C(s)={1\over (1-s)^2}\)</li>
+</ol>
+<p><strong>soln</strong></p>
+<p>(1) \(C(s)={1\over 2}\left[{1\over 1-s}+{1\over 1+s}\right]={1\over 2}[a_n+b_n]\)
+then \(a_n=1, R_A=1\), \(b_n=(-1)^n, R_B=1\)  \(n\ge 0\)
+\(C(s)={1\over 2}\sum_{n=0}^\infty (1+(-1)^n)s^n\)
+Hence
+\[
+\begin{cases}
+c_n={1\over 2}(1+(-1)^n)&amp; n\ge 0\\
+R_C=1 = \min(R_A,R_B)
+\end{cases}
+\]
+(2)</p>
+<ul class="list">
+<li><p>Method1: \(C(s)={1\over 1-s}{1\over 1-s}\)
+then \(B(s)=A(s)=\sum_{n=0}^\infty s^n, \quad a_n=b_n=1, R_A=R_B=1, n\ge 0\)</p>
+<p>\(c_n=\sum_{k=0}^n a_k b_{n-k}=n+1\)  \(R_C=\min(R_A,R_B)=1\)</p>
+</li>
+<li><p>Method2: \(C(s)=(1+(-s))^{-2} = \sum_{n=0}^\infty (-1)^n\binom{-2}{n}s^n\)
+\[
+\begin{aligned}
+c_n &amp;= (-1)^n\binom{-2}{n}, \quad R_C=1\\
+&amp;= (-1)^n {(-2)(-2-1)\ldots(-2-n+1)\over n!}\\
+&amp;=(-1)^n(-1)^n {2_3_\ldots*(n+1)\over n!}=n+1
+\end{aligned}
+\]</p>
+</li>
+</ul>
+<h2 id="4.2-probablity-generating-function-(pgf)"><a class="header-link" href="#4.2-probablity-generating-function-(pgf)"></a>4.2 Probablity generating function (pgf)</h2>
+<p><strong>Defn</strong> Suppose \(x\) is non-negative integer rv with range =\({0,1,2,\ldots}\cup{\infty}\). Let \(P_n=P(x=n)\) for \(n=0,1,2,\ldots\)</p>
+<p>Then \(G_X(s)=\sum_{n=0}^\infty P_ns^n = \sum_{n=0}^\infty P(X=n)s^n\) is called pgf of \(X\)</p>
+<p>If \(X\) is a proper rv,  then \(\begin{cases}P(x=\infty)=0\P(x&lt;\infty)=1\end{cases}\)  , then \(G_X(s)=\sum_{n=0}^\infty P(X=n)s^n=E[s^X]\)</p>
+<p><strong>Comments</strong></p>
+<ol class="list">
+<li>\(G_X(1)=\sum_{n=0}^\infty P(X=n)=P(X&lt;\infty) \le 1\)
+\[
+|G_X(s)|=\left|\sum_{n=0}^\infty p_n s^n \right|\le \sum_{n=0}^\infty p_n |s|^n \le \sum_{n=0}^\infty p_n &lt;\infty
+\]
+if \(|s|\le 1\)</li>
+</ol>
+<p><strong>Property of pgf</strong></p>
+<ol class="list">
+<li><p>why pgf?
+If we have \(G_X(s)\), we can recover \({P_n=P(X=n)}_{n=0}^\infty\)
+Method 1:
+\(\begin{cases}P_0=G_X(0) \ P_n={G_X^{(n)}(0)\over n! }&amp;n\ge 1\end{cases}\)
+Method 2: use properties of gfs &amp; commonly used gfs to recover \({P_n}_{n=0}^\infty\)</p>
+<p>Reason for pgf:</p>
+<ol class="list">
+<li>pgf helps to find \(P_n = P(X=n)\) for rv \(x\) [discrete rv]</li>
+<li>mgf(moment generating function) helps to find \(E(X^k)\) for \(k\ge 1\). [for both discrete &amp; discrete continuous rvs]</li>
+</ol>
+</li>
+<li><p>Property 2
+we can check if  \(X\) is proper or not.
+Note: \(P(x&lt;\infty)=\sum_{n=0}^\infty P(X=n)=\sum_{n=0}^\infty P_n=G_X(1)\)</p>
+<pre class="hljs"><code>        <span class="hljs-built_in">and</span> Recall \(G_X(s)=\sum_{<span class="hljs-built_in">n</span>=<span class="hljs-number">0</span>}^\infty P_ns^<span class="hljs-built_in">n</span>\)</code></pre><p>​            If \(G_X(1)=1\implies \)proper.</p>
+<p>​            If \(G_X(1)&lt;1 \implies\) improper</p>
+<p>​            If \(G_X(1)&gt;1\implies\) you did sth wrong</p>
+</li>
+</ol>
+<h1 id="lec-15"><a class="header-link" href="#lec-15"></a>Lec 15</h1>
+<ol start="3">
+<li><p>Property #3
+If \(x\) is proper, then
+\[
+E(x)= G_x&#39;(1)\\
+var(x)=\underbrace{G_x&#39;&#39;(1)+G_x&#39;(1)}_{E(x^2)}-[\underbrace{G_x&#39;(1)}_{E(x)}]^2
+\]</p>
+</li>
+<li><p>Property #4: Uniqness Theorem
+Two random variables X and Y have the same distribution iff \(G_X(s)=G_Y(s)\)  \(\implies\) use pgf to determine distribution type</p>
+</li>
+<li><p>Property #5 Indepedence Property
+If X and Y are independent with ranges = {0, 1, 2, …} \(\cup {\infty}\)</p>
+<p>Argument:
+\[
+\begin{aligned}
+G_{X+Y}(s)&amp;\stackrel{proper}{=}E[s^{X+Y}]\\
+&amp;=E[s^X_s^Y]\\
+&amp;\stackrel{indepdent}{=}E[s^X]E[s^Y] \\
+&amp;= G_X(s)_G_Y(s)
+\end{aligned}
+\]</p>
+</li>
+</ol>
+<h1 id="lec-16"><a class="header-link" href="#lec-16"></a>Lec 16</h1>
+<p>useless examples</p>
+<h2 id="4.3-simple-random-walk"><a class="header-link" href="#4.3-simple-random-walk"></a>4.3 Simple random walk</h2>
+<p>Background:</p>
+<ul class="list">
+<li>suppose we have a particle staring from \(x_0\) (eg, \(x_0=0\))</li>
+<li>At each step, the particle \(\begin{cases}\text{can move to right by 1 unit with prob \)= p\(}\\
+\text{can move to right by 1 unit with prob \)q=1- p\(} \end{cases}\)</li>
+</ul>
+<p><strong>eg</strong> toss a coin</p>
+<ul class="list">
+<li>H: move to right by 1 unit</li>
+<li>T: move to left by 1 unit</li>
+</ul>
+<p>Suppose we toss a coin 5 times and get HHTTH</p>
+<p><strong>Def</strong> Simple random walk: Let \(x_0\) be the starting point of the process (eg: \(x_0=0\)) &amp; \(x_n\) be the position of the process after \(n\) steps. Then \({x_n}_{n=0}^\infty\) is called a simple random walk or ordinary random walk.</p>
+<p><strong>Our interest</strong></p>
+<p>\(\lambda_{0,0}=\) Returning to 0, given the process stars with 0</p>
+<p>\(\lambda_{0,k}=\) visiting \(k\), given the process starts with 0</p>
+<p><strong>LET</strong> \(T_{0,0}=\) waiting time for observing 1st \(\lambda_{0,0}\)  \(=\min{n\ge 1, x_n=0| x_0=0 }\)</p>
+<p>For example, \(k=1\), in the example above, \(T_{0,1}=1\).</p>
+<p>We would like to find</p>
+<ol class="list">
+<li>\(P(T_{0,0}&lt;\infty) \&amp; E(T_{0,0})\)</li>
+<li>\(P(T_{0,k}&lt;\infty) \&amp; E(T_{0,k})\)</li>
+</ol>
+<h1 id="lec-17"><a class="header-link" href="#lec-17"></a>Lec 17</h1>
+<ul class="list">
+<li>\(T_{0,0}=\) waiting time for observing 1st \(\lambda_{0,0}\)  \(=\min{n\ge 1, x_n=0| x_0=0 }\)</li>
+<li>\(T_{0,k}=\) waiting time for observing 1st \(\lambda_{0,k}\)  \(=\min{n\ge 1, x_n=0| x_0=0 }\)</li>
+</ul>
+<p><strong>Notation</strong>
+\[
+G_{0,0}(s)=\sum_{n=0}^\infty P(T_{0,0}=n) s^n ~~ pgf~of ~T_{0,0} \\
+G_{0,k}(s)=\sum_{n=0}^\infty P(T_{0,k}=n) s^n ~~ pgf~of ~T_{0,k}
+\]
+Preparation: 1st for \(k&gt;0\), positive integer \(k\)</p>
+<p>\( T_{0,k}=T_{0,1}+T_{1,2}+\ldots+T_{k-1,k}\)</p>
+<p>\(T_{i,j}\) = waiting time for visiting \(j\), starting from \(i\) = \(\min{n\ge 1, x_n=j | x_0 = i}\)</p>
+<p><strong>Claim</strong> \(T_{0,1}, T_{1,2},\ldots, T_{k-1,k}\) are \(k\) iid rvs since all mean moving to right by 1 unit.</p>
+<p><strong>That is</strong> \(T_{0,k}=\sum_{i=1}^k T_{i-1,i}\)             all \(T_{i-1,i}\) are iid &amp; have same distribution as \(T_{0,1}\).
+\[
+\implies G_{0,k}(s)=pgf~of~T_{0,k} = \prod_{i=1}^k \underbrace{G_{T_{i-1,i} }(s)}_{pgf~of~T_{i-1,i} } \\
+\implies G_{0,k}(s)=[G_{0,1}(s)]^k \qquad \text{for \(k&gt;0\)}
+\]
+2nd: In general:</p>
+<ul class="list">
+<li>\(T_{0,1}\&amp; T_{-1,0}\) have same distribution [move to right by 1 unit]</li>
+<li>\(T_{1,0}\&amp;T_{0,-1}\)  … [left by 1]</li>
+</ul>
+<p>they are all in simple random walk.</p>
+<p><strong>Next</strong> move to pgf of \(T_{0,1}\) then \(T_{0,k}\) for \(k&gt;0\).</p>
+<p><strong>by def</strong> \(G_{0,1}(s)=\sum_{n=0}^\infty P(T_{0,1}=n)s^n = pgf~of~ T_{0,1}\)</p>
+<p>\(n=0, P(T_{0,1}=0)=0;~~ n=1, P(T_{0,1}=1)=P(\text{move to right by 1})=p\)</p>
+<p>For \(n\ge 2\)
+\[
+\begin{aligned}
+P(T_{0,1}=n) &\stackrel{\substack{\text{condition on}\\\text{1st argument}}}{=}\\
+&\underbrace{P(T_{0,1}=n|\text{1st stop = right})}_0 *
+\underbrace{P(\text{1st stop = right})}_p \\
+&+\underbrace{P(T_{0,1}=n|\text{1st stop = left})}_0 *
+\underbrace{P(\text{1st stop = left})}_1
+\end{aligned}
+\]</p>
+<p>1st stop = right \(\implies T_{0,1}=1\ne n\)  for \(n\ge 2\)
+1st stop = left \(\implies\) we are in position &quot;-1&quot; &amp; \(T_{0,1}=n\) means \(T_{-1,1}=n-1\)</p>
+<p>Hence \(P(T_{0,1}=n)=P(T_{-1,1}=n-1)_q = P(T_{0,2}=n-1)_q\)</p>
+</div>
