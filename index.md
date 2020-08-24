@@ -7,7 +7,7 @@ feature_text: |
 ---
 
 <div style="column-count:2;">
-<p>主板 <strong>Z390 I AORUS PRO WIFI</strong>:</p>
+<p>Z390 I AORUS</p>
 <ul>
 <li><a href='https://item.jd.com/100000668170.html'>京东</a></li>
 <li><a href='https://www.amazon.ca/GIGABYTE-Z390-AORUS-PRO-Motherboards/dp/B07JBX52TM/ref=sr_1_1?dchild=1&amp;keywords=Z390+I+AORUS+PRO&amp;qid=1598274033&amp;s=electronics&amp;sr=1-1'>amazon 1</a></li>
