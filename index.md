@@ -24,13 +24,13 @@ i5 9600k
 - [jingdong](https://item.jd.com/100000634419.html)
 - [amazon](https://www.amazon.ca/Intel-BX80684I59600K-Boxed-i5-9600K-Processor/dp/B07HHLX1R8/ref=sr_1_1?dchild=1&keywords=i5+9600k&qid=1598274733&sr=8-1)
 - [canada computer](https://www.canadacomputers.com/product_info.php?cPath=4_65&item_id=125960)
-- [newegg]([https://www.newegg.ca/core-i5-9th-gen-intel-core-i5-9600k/p/N82E16819117959?Description=i5%209600k&cm_re=i5_9600k-_-19-117-959-_-Product](https://www.newegg.ca/core-i5-9th-gen-intel-core-i5-9600k/p/N82E16819117959?Description=i5 9600k&cm_re=i5_9600k-_-19-117-959-_-Product))
+- [newegg](https://www.newegg.ca/core-i5-9th-gen-intel-core-i5-9600k/p/N82E16819117959?Description=i5 9600k&cm_re=i5_9600k-_-19-117-959-_-Product)
 
 samsung evo plus 
 
 - [jingdong](https://item.jd.com/100003181110.html)
 - [canada computer](https://www.canadacomputers.com/product_info.php?cPath=179_1927_1930&item_id=135645)
-- [newegg]([https://www.newegg.ca/samsung-970-evo-plus-500gb/p/N82E16820147742?Description=samsung%20970%20evo%20plus&cm_re=samsung_970%20evo%20plus-_-20-147-742-_-Product](https://www.newegg.ca/samsung-970-evo-plus-500gb/p/N82E16820147742?Description=samsung 970 evo plus&cm_re=samsung_970 evo plus-_-20-147-742-_-Product))
+- [newegg](https://www.newegg.ca/samsung-970-evo-plus-500gb/p/N82E16820147742?Description=samsung 970 evo plus&cm_re=samsung_970 evo plus-_-20-147-742-_-Product)
 - [amazon](https://www.amazon.ca/gp/product/B07M7Q21N7/ref=ewc_pr_img_2?smid=A3DWYIK6Y9EEQB&psc=1)
 
 
