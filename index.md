@@ -7,13 +7,7 @@ feature_text: |
 ---
 
 <div style="column-count:2;">
-<p>Z390 I AORUS</p>
-<ul>
-<li><a href='https://item.jd.com/100000668170.html'>京东</a></li>
-<li><a href='https://www.amazon.ca/GIGABYTE-Z390-AORUS-PRO-Motherboards/dp/B07JBX52TM/ref=sr_1_1?dchild=1&amp;keywords=Z390+I+AORUS+PRO&amp;qid=1598274033&amp;s=electronics&amp;sr=1-1'>amazon 1</a></li>
-<li><a href='https://www.amazon.ca/Aorus-Z390-AORUS-PRO-Socket/dp/B07J6762XD/ref=sr_1_2?dchild=1&amp;keywords=Z390+I+AORUS+PRO&amp;qid=1598274141&amp;s=electronics&amp;sr=1-2'>amazon 2</a></li>
 
-</ul>
 <p>U9S</p>
 <ul>
 <li><a href='https://detail.tmall.com/item.htm?spm=a230r.1.14.16.159236a6X4V4NS&amp;id=540882604523&amp;ns=1&amp;abbucket=8'>taobao</a></li>
