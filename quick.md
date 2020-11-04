@@ -9,6 +9,8 @@ feature_text: |
 
 - [CS 485](https://notes.sibeliusp.com/pdfs/1209/cs485.pdf)
     - [youtube](https://www.youtube.com/playlist?list=PLPW2keNyw-usgvmR7FTQ3ZRjfLs5jT4BO)
+    - [textbook](https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf)
+    - [manual](https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/MLbookSol.pdf)
     - [cs485-RW](https://www.richardwu.ca/notes/cs485-notes.pdf)
 - [MUSIC 370](https://notes.sibeliusp.com/md/1209/music370/)
     - [MUSIC 271](https://notes.sibeliusp.com/md/1201/music271/)
