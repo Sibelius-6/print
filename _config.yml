@@ -27,7 +27,7 @@ plugins:
 #- custom_permalink
 
 # Site settings
-url: 'https://notes.sibeliusp.com' # now just assume it won't change. This is for sitemap.xml
+url: 'https://print.sibeliusp.com' # now just assume it won't change. This is for sitemap.xml
 baseurl: ''
 title: 'Sibelius Peng'
 description: 'Lecture Notes'
@@ -58,7 +58,7 @@ navigation_header:
   url: /term/
 - title: Search
   url: /search/
-- title: Contact
+- title: Quick
   url: /contact/
 
 # Footer nav
