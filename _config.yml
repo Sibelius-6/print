@@ -50,16 +50,12 @@ paginate_path: blog/page:num
 navigation_header:
 - title: Home
   url: /
+- title: Quick
+  url: /quick/
 - title: All
   url: /blog/
-- title: Subject
-  url: /subject/
-- title: Term
-  url: /term/
-- title: Search
-  url: /search/
-- title: Quick
-  url: /contact/
+
+
 
 # Footer nav
 navigation_footer:
