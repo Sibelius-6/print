@@ -12,6 +12,6 @@ feature_text: |
 - [MUSIC 371](https://notes.sibeliusp.com/md/1211/music371/)
 - [CO 331](https://notes.sibeliusp.com/pdfs/1211/co331.pdf)
     - [CO 331 Cameron](https://github.com/Hextical/university-notes/blob/master/year-2/semester-2/CO%20331/co331.pdf)
-    - [CO 331 old](https://notes.sibeliusp.com/pdfs/1201/co331.pdf]
+    - [CO 331 old](https://notes.sibeliusp.com/pdfs/1201/co331.pdf)
 - [CO 487](https://notes.sibeliusp.com/pdfs/1211/co487.pdf)
 - [PSYCH 101](https://notes.sibeliusp.com/md/1211/psych101/)
