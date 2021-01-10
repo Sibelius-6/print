@@ -7,18 +7,11 @@ feature_text: |
     ## Quick
 ---
 
-- [CS 485](https://notes.sibeliusp.com/pdfs/1209/cs485.pdf)
-    - [youtube](https://www.youtube.com/playlist?list=PLPW2keNyw-usgvmR7FTQ3ZRjfLs5jT4BO)
-    - [textbook](https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf)
-    - [manual](https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/MLbookSol.pdf)
-    - [cs485-RW](https://www.richardwu.ca/notes/cs485-notes.pdf)
-- [MUSIC 370](https://notes.sibeliusp.com/md/1209/music370/)
-    - [MUSIC 271](https://notes.sibeliusp.com/md/1201/music271/)
-    - [MUSIC 270](https://notes.sibeliusp.com/markdown/1199/music270_review/)
-- [CO 456](https://notes.sibeliusp.com/pdfs/1209/co456.pdf)
-- [AMATH 351](https://notes.sibeliusp.com/pdfs/1209/amath351.pdf)
-- [AMATH 331](http://www.math.uwaterloo.ca/~snew/pmath331-2020-F/)
-    - [notes](http://www.math.uwaterloo.ca/~snew/pmath331-2020-F/LectureNotes/index.html)
-    - [assts](http://www.math.uwaterloo.ca/~snew/pmath331-2020-F/Assignments/index.html)
-    - [pro-sets](http://www.math.uwaterloo.ca/~snew/pmath331-2020-F/PracticeProblems/index.html)
-    - [winter](https://notes.sibeliusp.com/pdfs/1201/amath331.pdf)
+- [CS 489](https://notes.sibeliusp.com/pdfs/1211/cs479.pdf)
+- [CS 365](https://notes.sibeliusp.com/pdfs/1211/cs365.pdf)
+- [MUSIC 371](https://notes.sibeliusp.com/md/1211/music371/)
+- [CO 331](https://notes.sibeliusp.com/pdfs/1211/co331.pdf)
+    - [CO 331 Cameron](https://github.com/Hextical/university-notes/blob/master/year-2/semester-2/CO%20331/co331.pdf)
+    - [CO 331 old](https://notes.sibeliusp.com/pdfs/1201/co331.pdf]
+- [CO 487](https://notes.sibeliusp.com/pdfs/1211/co487.pdf)
+- [PSYCH 101](https://notes.sibeliusp.com/md/1211/psych101/)
