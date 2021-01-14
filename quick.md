@@ -17,3 +17,5 @@ feature_text: |
 - [CO 487](https://notes.sibeliusp.com/pdfs/1211/co487.pdf)
     - [Cameron](https://hextical.github.io/university-notes/year-3/semester-2/CO%20487/co487.pdf)
 - [PSYCH 101](https://notes.sibeliusp.com/md/1211/psych101/)
+
+[phys 359](https://github.com/jensen-lawrence/UWLectureNotes/tree/master/PHYS-359)
