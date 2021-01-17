@@ -109,3 +109,5 @@ favicons:
   180: '/favicon.png'
   512: '/favicon.png'
   1024: '/favicon.png'
+
+theme: jekyll-theme-midnight
