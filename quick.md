@@ -19,4 +19,9 @@ feature_text: |
 - [MUSIC 371](https://notes.sibeliusp.com/mdf/1211/music371/)
 - CS 360
 
+
+<br>
+<br>
+[pdf](https://notes.sibeliusp.com/pdf), [mdf](https://notes.sibeliusp.com/mdf)
+
 [phys 359](https://github.com/jensen-lawrence/UWLectureNotes/tree/master/PHYS-359)
