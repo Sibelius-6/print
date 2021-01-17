@@ -1,6 +1,5 @@
 ---
 title: Quick
-layout: default
 ---
 
 - [CS 489](https://notes.sibeliusp.com/pdf/1211/cs479.pdf)
@@ -21,6 +20,4 @@ layout: default
 
 [pdf](https://notes.sibeliusp.com/pdf), [mdf](https://notes.sibeliusp.com/mdf)
 
-<br>
-<br>
 [phys 359](https://github.com/jensen-lawrence/UWLectureNotes/tree/master/PHYS-359)
