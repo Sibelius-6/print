@@ -2,6 +2,11 @@
 title: Quick
 ---
 
+# [pdf](https://notes.sibeliusp.com/pdf)
+
+# [mdf](https://notes.sibeliusp.com/mdf)
+
+
 - [CS 489](https://notes.sibeliusp.com/pdf/1211/cs479.pdf)
     - [David](https://github.com/RootofalleviI/2021W-temp/tree/master/CS-489)
     - [RW](https://www.richardwu.ca/notes/cs489-notes.pdf)
@@ -18,6 +23,5 @@ title: Quick
 <br>
 <br>
 
-[pdf](https://notes.sibeliusp.com/pdf), [mdf](https://notes.sibeliusp.com/mdf)
 
 [phys 359](https://github.com/jensen-lawrence/UWLectureNotes/tree/master/PHYS-359)
