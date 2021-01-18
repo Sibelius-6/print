@@ -2,9 +2,9 @@
 title: Quick
 ---
 
-# [pdf](https://notes.sibeliusp.com/pdf)
+## [pdf](https://notes.sibeliusp.com/pdf)
 
-# [mdf](https://notes.sibeliusp.com/mdf)
+## [mdf](https://notes.sibeliusp.com/mdf)
 
 
 - [CS 489](https://notes.sibeliusp.com/pdf/1211/cs479.pdf)
