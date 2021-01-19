@@ -23,5 +23,5 @@ title: Quick
 <br>
 <br>
 
-
-[phys 359](https://github.com/jensen-lawrence/UWLectureNotes/tree/master/PHYS-359)
+- [experiment](https://notes.sibeliusp.com/m)
+- [phys 359](https://github.com/jensen-lawrence/UWLectureNotes/tree/master/PHYS-359)
