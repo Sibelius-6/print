@@ -8,6 +8,7 @@ title: Quick
 - [CS 489](https://notes.sibeliusp.com/pdf/1211/cs479.pdf)
     - [David](https://github.com/RootofalleviI/2021W-temp/tree/master/CS-489)
     - [RW](https://www.richardwu.ca/notes/cs489-notes.pdf)
+    - [jupytor](https://uwaterloo.syzygy.ca/)
 - [CO 331](https://notes.sibeliusp.com/pdf/1211/co331.pdf)
     - [CO 331 Cameron](https://hextical.github.io/university-notes/year-2/semester-2/CO%20331/co331.pdf)
     - [CO 331 old](https://notes.sibeliusp.com/pdf/1201/co331.pdf)
