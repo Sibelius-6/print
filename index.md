@@ -16,9 +16,8 @@ title: Quick
     - [Cameron](https://hextical.github.io/university-notes/year-3/semester-2/CO%20487/co487.pdf)
 - [MUSIC 371](https://notes.sibeliusp.com/mdf/1211/music371/)
 
-
-
 <br>
+[twitch vid](https://onlinevideoconverter.party/)
 <br>
 ## [pdf](https://notes.sibeliusp.com/pdf)
 
