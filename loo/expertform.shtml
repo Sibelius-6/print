@@ -13,8 +13,8 @@
     <option value="1201">Winter 2020
     <option value="1205">Spring 2020
     <option value="1209">Fall 2020
-<option value="1211" selected>Winter 2021
-<option value="1215">Spring 2021
+<option value="1211">Winter 2021
+<option value="1215" selected>Spring 2021
 <option value="1219">Fall 2021
 <option value="1221">Winter 2022
 <option value="1225">Spring 2022
