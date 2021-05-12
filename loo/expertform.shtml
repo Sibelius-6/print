@@ -1,0 +1,37 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Waterloo Class Schedules</title>
+</head>
+<body>
+    <p>This form was exported from <a href="https://cs.uwaterloo.ca/cscf/teaching/schedule/expert" target="_blank">here</a>,
+    but with customized functionalities. Scroll down to see the form. <a href="/" target="_blank">Back to home</a> </p>
+<form method="get" action="https://classes.uwaterloo.ca/cgi-bin/cgiwrap/infocour/salook.pl" target="results">
+<label accesskey="T"><b>T</b>erm: <select id="sess" name="sess" tabindex="1">
+    <option value="1199">Fall 2019
+    <option value="1201">Winter 2020
+    <option value="1205">Spring 2020
+    <option value="1209">Fall 2020
+<option value="1211" selected>Winter 2021
+<option value="1215">Spring 2021
+<option value="1219">Fall 2021
+<option value="1221">Winter 2022
+<option value="1225">Spring 2022
+</select>
+</label>
+<label accesskey="L"><b>L</b>evel: <select id="level" name="level" tabindex="2">
+<option value="under" selected>Undergraduate
+<option value="grad">Graduate
+</select>
+</label>
+<label accesskey="S"><b>S</b>ubject: 
+<input id="subject" name="subject" size="5" tabindex="3">
+</label>
+<label><b>C</b>ourse: <input name="cournum" size="5" tabindex="5" accesskey="C"></label>
+<input type="submit" value="View" tabindex="6" accesskey="V">
+
+</form>
+
+</body>
+</html>
