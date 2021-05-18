@@ -2,7 +2,8 @@
 title: Quick
 ---
 
-- [SDS 150R](https://classes.uwaterloo.ca/cgi-bin/cgiwrap/infocour/salook.pl?level=under&sess=1215&subject=SDS&cournum=150R)
+- [CS 341](https://cs.uwaterloo.ca/~lapchi/cs341/notes.html)
+
 
 ---
 
