@@ -2,7 +2,7 @@
 title: Quick
 ---
 
-- [CS 341](https://cs.uwaterloo.ca/~lapchi/cs341/notes.html)
+- [CS 341](https://cs.uwaterloo.ca/~lapchi/cs341/notes.html), [Lau](https://cs.uwaterloo.ca/~lapchi/cs341/notes.html)
 - [AHS 105](https://notes.sibeliusp.com/mdf/1215/ahs105/)
 - [SOC 101](https://notes.sibeliusp.com/mdf/1215/soc101/)
 
