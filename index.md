@@ -6,6 +6,8 @@ title: Quick
 - [AHS 105](https://notes.sibeliusp.com/mdf/1215/ahs105/)
 - [SOC 101](https://notes.sibeliusp.com/mdf/1215/soc101/)
 
+[subtitle](https://savesubs.com/zh)
+
 ---
 
 - [loo](/loo)
@@ -17,4 +19,4 @@ title: Quick
 - [main](https://notes.sibeliusp.com/)
   - [mdf](https://notes.sibeliusp.com/mdf/)
   - [pdf](https://notes.sibeliusp.com/pdf/)
-- [phys 359](https://github.com/jensen-lawrence/UWLectureNotes/tree/master/PHYS-359)
+-
