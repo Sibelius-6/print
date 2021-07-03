@@ -13,7 +13,9 @@ title: Quick
 - [main](https://notes.sibeliusp.com/)
 - [mdf](https://notes.sibeliusp.com/mdf/)
 - [pdf](https://notes.sibeliusp.com/pdf/)
-- [edit](https://github.com/Sibelius-6/print/blob/gh-pages/index.md)
 
-# comment
+<br><br>
+
+- [edit](https://github.com/Sibelius-6/print/blob/gh-pages/index.md)
 - [comment](https://developers.facebook.com/tools/comments/)
+- [histat](https://www.histats.com/viewstats/?sid=4472349&act=2)
