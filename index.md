@@ -2,12 +2,15 @@
 title: Quick
 ---
 
-- [CS 341](https://notes.sibeliusp.com/pdf/1215/cs341.pdf), [Lau](https://cs.uwaterloo.ca/~lapchi/cs341/notes.html)
-- [SOC 101](https://notes.sibeliusp.com/mdf/1215/soc101/)
+- [CS 482 site](https://cs.uwaterloo.ca/~binma/cs482/index.html), [CS 482 notes](https://notes.sibeliusp.com/pdf/1221/cs482.pdf)
+- [CO 353](https://notes.sibeliusp.com/pdf/1221/co353.pdf)
+- [PMATH 334](https://notes.sibeliusp.com/pdf/1221/pmath334.pdf)
+- [SMF](https://notes.sibeliusp.com/mdf/1221/smf211/)
+- [MUSIC](https://notes.sibeliusp.com/mdf/1221/music376/)
 
-[subtitle](https://savesubs.com/zh)
 
 
+---
 
 - [loo](/loo)
 - [main](https://notes.sibeliusp.com/)
