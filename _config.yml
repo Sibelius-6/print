@@ -5,3 +5,5 @@ url: https://print.sibeliusp.com
 baseurl: "/" 
 remote_theme: riggraz/no-style-please
 
+theme_config:
+  appearance: "dark"
