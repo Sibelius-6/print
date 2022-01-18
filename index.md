@@ -4,7 +4,7 @@ title: Quick
 
 - [CS 482 site](https://cs.uwaterloo.ca/~binma/cs482/index.html), [CS 482 notes](https://notes.sibeliusp.com/pdf/1221/cs482.pdf)
 - [CO 353](https://notes.sibeliusp.com/pdf/1221/co353.pdf)
-- [PMATH 334](https://notes.sibeliusp.com/pdf/1221/pmath334.pdf)
+- [PMATH 334](https://notes.sibeliusp.com/pdf/1221/pmath334.pdf), [347](https://notes.sibeliusp.com/pdf/1211/pm347.pdf)
 - [SMF](https://notes.sibeliusp.com/mdf/1221/smf211/)
 - [MUSIC](https://notes.sibeliusp.com/mdf/1221/music376/)
 
