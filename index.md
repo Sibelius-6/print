@@ -22,3 +22,4 @@ title: Quick
 - [edit](https://github.com/Sibelius-6/print/blob/gh-pages/index.md)
 - [comment](https://developers.facebook.com/tools/comments/)
 - [histat](https://www.histats.com/viewstats/?sid=4472349&act=2)
+- [markdown to tex](https://pandoc.org/try/)
