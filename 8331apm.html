@@ -1,0 +1,62 @@
+
+<html>
+  <head>
+    <title>Line Chart JS</title>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js"></script>
+    <style type="text/css">      
+      html, body, #container { 
+        width: 100%; height: 100%; margin: 0; padding: 0; 
+      } 
+    </style>
+  </head>
+  <body>
+<div id='container'></div>
+    <script>
+      anychart.onDocumentReady(function () {  
+        // add data
+var data = [["01/03/2024-23:18:56", "2399.00", "3399.00", "7268.00", "3399.00", "3399.00", "3399.00"], ["02/03/2024-09:52:50", "2399.00", "3399.00", "7268.00", "3399.00", "3399.00", "3399.00"]];
+
+// create a data set
+var dataSet = anychart.data.set(data);
+
+// map the data for all series
+var economikData = dataSet.mapAs({x: 0, value: 1});
+var avshopData = dataSet.mapAs({x: 0, value: 2});
+var avshop2Data = dataSet.mapAs({x: 0, value: 3});
+var tomleeData = dataSet.mapAs({x: 0, value: 4});
+var moogData = dataSet.mapAs({x: 0, value: 5});
+var mcquadeData = dataSet.mapAs({x: 0, value: 6});
+
+    // create a line chart
+        var chart = anychart.line();
+
+        // create the series and name them
+        var economik = chart.line(economikData);
+economik.name('economik');
+var avshop = chart.line(avshopData);
+avshop.name('avshop');
+var avshop2 = chart.line(avshop2Data);
+avshop2.name('avshop2');
+var tomlee = chart.line(tomleeData);
+tomlee.name('tomlee');
+var moog = chart.line(moogData);
+moog.name('moog');
+var mcquade = chart.line(mcquadeData);
+mcquade.name('mcquade');
+
+    // add a legend
+        chart.legend().enabled(true);
+  
+        // add a title
+        chart.title("8331apm");
+
+        // specify where to display the chart
+        chart.container("container");
+  
+        // draw the resulting chart
+        chart.draw();
+  
+      });
+    </script>
+  </body>
+</html>
