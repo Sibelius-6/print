@@ -1,0 +1,107 @@
+
+<html>
+  <head>
+    <title>Amazon mic stuff</title>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js"></script>
+    <style type="text/css">      
+      html, body, #container { 
+        width: 100%; height: 100%; margin: 0; padding: 0; 
+      } 
+    </style>
+  </head>
+  <body>
+<div id='container'></div>
+    <script>
+      anychart.onDocumentReady(function () {  
+        // add data
+var data = [["03-04 09:50:34", "26.10", "27.71", "46.27", "16.00", "23.27", "31.27", "20.27", "19.77", "26.55", "38.28", "15.62", "8.99", "28.27", "21.99", "24.98", "17.55", "27.27", "22.59", "23.80", "43.86", "49.25"], ["03-04 10:00:45", "26.10", "27.71", "46.27", "16.00", "23.27", "31.27", "20.27", "19.77", "26.55", "38.28", "15.62", "8.99", "28.27", "21.99", "24.98", "17.55", "27.27", "22.59", "23.80", "43.86", "49.25"], ["03-04 11:22:57", "26.10", "27.71", "46.27", "16.00", "23.27", "31.27", "20.27", "19.77", "26.55", "38.28", "15.62", "8.99", "28.27", "21.99", "24.98", "17.55", "27.27", "22.59", "23.80", "43.86", "49.25"]];
+
+// create a data set
+var dataSet = anychart.data.set(data);
+
+// map the data for all series
+var Data1 = dataSet.mapAs({x: 0, value: 1});
+var Data2 = dataSet.mapAs({x: 0, value: 2});
+var Data3 = dataSet.mapAs({x: 0, value: 3});
+var Data4 = dataSet.mapAs({x: 0, value: 4});
+var Data5 = dataSet.mapAs({x: 0, value: 5});
+var Data6 = dataSet.mapAs({x: 0, value: 6});
+var Data7 = dataSet.mapAs({x: 0, value: 7});
+var Data8 = dataSet.mapAs({x: 0, value: 8});
+var Data9 = dataSet.mapAs({x: 0, value: 9});
+var Data10 = dataSet.mapAs({x: 0, value: 10});
+var Data11 = dataSet.mapAs({x: 0, value: 11});
+var Data12 = dataSet.mapAs({x: 0, value: 12});
+var Data13 = dataSet.mapAs({x: 0, value: 13});
+var Data14 = dataSet.mapAs({x: 0, value: 14});
+var Data15 = dataSet.mapAs({x: 0, value: 15});
+var Data16 = dataSet.mapAs({x: 0, value: 16});
+var Data17 = dataSet.mapAs({x: 0, value: 17});
+var Data18 = dataSet.mapAs({x: 0, value: 18});
+var Data19 = dataSet.mapAs({x: 0, value: 19});
+var Data20 = dataSet.mapAs({x: 0, value: 20});
+var Data21 = dataSet.mapAs({x: 0, value: 21});
+
+// create a line chart
+    var chart = anychart.line();
+
+    // create the series and name them
+    var Series1 = chart.line(Data1);
+Series1.name('On Stage MSA9508 Posi-Lok Sidemount Boom');
+var Series2 = chart.line(Data2);
+Series2.name('On Stage MSA5000 Laptop Mount');
+var Series3 = chart.line(Data3);
+Series3.name('On Stage MSA9505 Posi-Lok Telescoping Mini-Boom');
+var Series4 = chart.line(Data4);
+Series4.name('On Stage Microphone 6-inch Gooseneck');
+var Series5 = chart.line(Data5);
+Series5.name('On Stage Microphone 19-inch Gooseneck');
+var Series6 = chart.line(Data6);
+Series6.name('On Stage MSA-9502 Mini Microphone Boom Arm');
+var Series7 = chart.line(Data7);
+Series7.name('On Stage 13-inch Gooseneck');
+var Series8 = chart.line(Data8);
+Series8.name('Gator Frameworks Adjustable Angled Mini Boom Arm with Interlocking Design; 9 Inch Boom Arm');
+var Series9 = chart.line(Data9);
+Series9.name('Gator Frameworks Adjustable Clamp-On Angled Mini Interlocking Design 9 Inch Boom Arm');
+var Series10 = chart.line(Data10);
+Series10.name('Gator Frameworks Accessory Mount for Microphone stands; Fits up to 4 Accessories');
+var Series11 = chart.line(Data11);
+Series11.name('On Stage TMO8B Threaded Table Microphone Mount');
+var Series12 = chart.line(Data12);
+Series12.name('On-Stage Stands TM08C Flange Mount, Chrome');
+var Series13 = chart.line(Data13);
+Series13.name('OnStage MSA6000 Platform for Mic Stand');
+var Series14 = chart.line(Data14);
+Series14.name('On-Stage Stands QK2B Microphone Clip Quick Release');
+var Series15 = chart.line(Data15);
+Series15.name('Gator Frameworks GFW-MIC-ACCTRAY Microphone Stand Tray, black');
+var Series16 = chart.line(Data16);
+Series16.name('On-Stage Stands TM03 Table Microphone Clamp');
+var Series17 = chart.line(Data17);
+Series17.name('On Stage MY550 Microphone Extension Attachment Bar');
+var Series18 = chart.line(Data18);
+Series18.name('On-Stage Stands MSA9501 Posi-Lok Clutch');
+var Series19 = chart.line(Data19);
+Series19.name('OnStage MST1000 U-Mount Microphone Stand Tray, Black');
+var Series20 = chart.line(Data20);
+Series20.name('OnStage MSA7011 U-Mount Clamp-On Bookplate, Black');
+var Series21 = chart.line(Data21);
+Series21.name('OnStage MSA8020 Clamp On Microphone Boom Arm, Black');
+
+// add a legend
+    chart.legend().enabled(true);
+
+    // add a title
+    chart.title("Mic stuff");
+
+        // specify where to display the chart
+        chart.container("container");
+  
+        // draw the resulting chart
+        chart.draw();
+  
+      });
+    </script>
+  </body>
+</html>
