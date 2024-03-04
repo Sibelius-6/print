@@ -14,26 +14,41 @@
     <script>
       anychart.onDocumentReady(function () {  
         // add data
-var data = [["01/03/2024-23:18:56", "3399.00"], ["02/03/2024-09:52:50", "3399.00"], ["02/03/2024-12:47:30", "3399.00"], ["02/03/2024-18:48:11", "3399.00"], ["03/03/2024-00:49:06", "3399.00"], ["03/03/2024-06:49:46", "3399.00"], ["03/03/2024-12:50:25", "3399.00"], ["03/03/2024-18:51:04", "3399.00"], ["04/03/2024-00:51:58", "3399.00"], ["04/03/2024-06:52:38", "3399.00"], ["04/03/2024-12:53:28", "3399.00"], ["04/03/2024-16:23:53", "3399.00"]];
+var data = [["04/03/2024-16:23:53", "133.00", "133.00", "152.68", "120.00", "120.00", "133.56"]];
 
 // create a data set
 var dataSet = anychart.data.set(data);
 
 // map the data for all series
-var economikData = dataSet.mapAs({x: 0, value: 1});
+var avshopData = dataSet.mapAs({x: 0, value: 1});
+var economikData = dataSet.mapAs({x: 0, value: 2});
+var amazonData = dataSet.mapAs({x: 0, value: 3});
+var moogData = dataSet.mapAs({x: 0, value: 4});
+var mcquadeData = dataSet.mapAs({x: 0, value: 5});
+var musiccityData = dataSet.mapAs({x: 0, value: 6});
 
     // create a line chart
         var chart = anychart.line();
 
         // create the series and name them
-        var economik = chart.line(economikData);
+        var avshop = chart.line(avshopData);
+avshop.name('avshop');
+var economik = chart.line(economikData);
 economik.name('economik');
+var amazon = chart.line(amazonData);
+amazon.name('amazon');
+var moog = chart.line(moogData);
+moog.name('moog');
+var mcquade = chart.line(mcquadeData);
+mcquade.name('mcquade');
+var musiccity = chart.line(musiccityData);
+musiccity.name('musiccity');
 
     // add a legend
         chart.legend().enabled(true);
   
         // add a title
-        chart.title("8331awm");
+        chart.title("9310A");
 
         // specify where to display the chart
         chart.container("container");
