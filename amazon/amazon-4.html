@@ -1,0 +1,48 @@
+
+        <html>
+        <head>
+            <title>Amazon mic stuff</title>
+            <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js"></script>
+            <style type="text/css">      
+            html, body, #container { 
+                width: 100%; height: 100%; margin: 0; padding: 0; 
+            } 
+            </style>
+        </head>
+        <body>
+        <div id='container'></div>
+            <script>
+            anychart.onDocumentReady(function () {  
+                // add data
+        var data = [["03-04 09:50:34", "49.25"], ["03-04 10:00:45", "49.25"], ["03-04 11:22:57", "49.25"], ["03-04 19:23:46", "49.25"], ["03-05 03:24:33", "49.25"], ["03-05 10:15:37", "49.49"]];
+
+        // create a data set
+        var dataSet = anychart.data.set(data);
+
+        // map the data for all series
+        var Data1 = dataSet.mapAs({x: 0, value: 1});
+
+        // create a line chart
+            var chart = anychart.line();
+
+            // create the series and name them
+            var Series1 = chart.line(Data1);
+Series1.name('OnStage MSA8020 Clamp On Microphone Boom Arm, Black');
+
+        // add a legend
+            chart.legend().enabled(true);
+
+            // add a title
+            chart.title("Mic stuff");
+
+                // specify where to display the chart
+                chart.container("container");
+        
+                // draw the resulting chart
+                chart.draw();
+        
+            });
+            </script>
+        </body>
+        </html>
+        

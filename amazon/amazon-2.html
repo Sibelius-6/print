@@ -1,0 +1,60 @@
+
+        <html>
+        <head>
+            <title>Amazon mic stuff</title>
+            <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js"></script>
+            <style type="text/css">      
+            html, body, #container { 
+                width: 100%; height: 100%; margin: 0; padding: 0; 
+            } 
+            </style>
+        </head>
+        <body>
+        <div id='container'></div>
+            <script>
+            anychart.onDocumentReady(function () {  
+                // add data
+        var data = [["03-04 09:50:34", "15.62", "8.99", "28.27", "21.99", "24.98"], ["03-04 10:00:45", "15.62", "8.99", "28.27", "21.99", "24.98"], ["03-04 11:22:57", "15.62", "8.99", "28.27", "21.99", "24.98"], ["03-04 19:23:46", "15.62", "8.99", "28.27", "21.99", "24.98"], ["03-05 03:24:33", "15.62", "8.99", "28.27", "21.99", "24.98"], ["03-05 10:15:37", "15.62", "8.99", "28.27", "21.99", "24.98"]];
+
+        // create a data set
+        var dataSet = anychart.data.set(data);
+
+        // map the data for all series
+        var Data1 = dataSet.mapAs({x: 0, value: 1});
+var Data2 = dataSet.mapAs({x: 0, value: 2});
+var Data3 = dataSet.mapAs({x: 0, value: 3});
+var Data4 = dataSet.mapAs({x: 0, value: 4});
+var Data5 = dataSet.mapAs({x: 0, value: 5});
+
+        // create a line chart
+            var chart = anychart.line();
+
+            // create the series and name them
+            var Series1 = chart.line(Data1);
+Series1.name('On Stage TMO8B Threaded Table Microphone Mount');
+var Series2 = chart.line(Data2);
+Series2.name('On-Stage Stands TM08C Flange Mount, Chrome');
+var Series3 = chart.line(Data3);
+Series3.name('OnStage MSA6000 Platform for Mic Stand');
+var Series4 = chart.line(Data4);
+Series4.name('On-Stage Stands QK2B Microphone Clip Quick Release');
+var Series5 = chart.line(Data5);
+Series5.name('Gator Frameworks GFW-MIC-ACCTRAY Microphone Stand Tray, black');
+
+        // add a legend
+            chart.legend().enabled(true);
+
+            // add a title
+            chart.title("Mic stuff");
+
+                // specify where to display the chart
+                chart.container("container");
+        
+                // draw the resulting chart
+                chart.draw();
+        
+            });
+            </script>
+        </body>
+        </html>
+        
